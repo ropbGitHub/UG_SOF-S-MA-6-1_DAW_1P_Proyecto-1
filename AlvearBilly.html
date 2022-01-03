@@ -1,222 +1,211 @@
 <!DOCTYPE html>
 
 <html lang="es">
-	<!--head-->
-	<!--TODO copiar y pegar partes que se van a repetir a lo largo de todas las páginas-->
-	<head>
-		<!-- Browser tab tittle -->
-		<title>ABJER | Salón de Eventos & Más</title>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Salón para eventos varios" />
-		<meta name="author" content="Grupo 3" />
-		<meta name="keywords" content="Salón de eventos" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- CSS Style-->
-		<link rel="stylesheet" href="assets/styles/style_master.css" />
-		<link rel="stylesheet" href="assets/styles/AlvearBilly.css">
-		<!-- Javascript -->
-		<script src="assets/javascript/app.js" defer></script>
-		<!-- ICONO MENU -->
-		<script src="https://kit.fontawesome.com/7f7aa7ef65.js" crossorigin="anonymous"></script>
-		<!-- browser tab icon-->
-		<link rel="icon" href="assets/images/logo.png" />
-		<!-- font external reference-->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
+  <!--head-->
+  <!--TODO copiar y pegar partes que se van a repetir a lo largo de todas las páginas-->
+  <head>
+    <!-- Browser tab tittle -->
+    <title>ABJER | Salón de Eventos & Más</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Salón para eventos varios" />
+    <meta name="author" content="Grupo 3" />
+    <meta name="keywords" content="Salón de eventos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Style-->
+    <link rel="stylesheet" href="assets/css/style_master.css" />
+    <link rel="stylesheet" href="assets/css/AlvearBilly.css" />
+    <!-- Javascript -->
+    <script src="assets/javascript/app.js" defer></script>
+    <!-- ICONO MENU -->
+    <script src="https://kit.fontawesome.com/7f7aa7ef65.js" crossorigin="anonymous"></script>
+    <!-- browser tab icon-->
+    <link rel="icon" href="assets/images/logo.png" />
+    <!-- font external reference-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-	<!--body-->
-	<body>
-		<div class="container">
-			<!--header-->
-			<!--TODO copiar y pegar partes que se van a repetir a lo largo de todas las páginas-->
-			<header class="header">
+  <!--body-->
+  <body>
+    <div class="container">
+      <!--header-->
+      <!--TODO copiar y pegar partes que se van a repetir a lo largo de todas las páginas-->
+      <header class="header">
+        <nav class="menu">
+          <img class="logo" src="assets/images/logo.png" alt="logo" />
+          <aside>
+            <h2 class="letra">A Beautiful Journey Event to Remember</h2>
+            <span>Salón de Eventos & Más</span>
+          </aside>
 
-				<nav class="menu">
-				
-					<img class="logo" src="assets/images/logo.png" alt="logo">
-					<aside>
-						<h2 class="letra">A Beautiful Journey Event to Remember</h2>
-						<span>Salón de Eventos & Más</span>
-					</aside>
-					
-					<ul class="menu_items">
-						<li><a href="PerezRenan_index.html"><strong class="peso">Inicio</strong></a></li>
-						<li><a href="GonzalezEmily.html"><strong class="peso">Galería</strong></a></li>
-						<li><a href="PradoAndres.html"><strong class="peso">Servicios</strong></a></li>
-						<li><a href="MatamorosJoaquin.html"><strong class="peso">Q&A</strong></a></li>
-						<li class="active"><a href="AlvearBilly.html"><strong class="peso">Contacto</strong></a></li>
-					</ul>
-		
-					<span class="btn_menu">
-						<i class="fas fa-bars"></i>
-					</span>
-		
-				</nav>
-			</header>
+          <ul class="menu_items">
+            <li>
+              <a href="PerezRenan_index.html"><strong class="peso">Inicio</strong></a>
+            </li>
+            <li>
+              <a href="GonzalezEmily.html"><strong class="peso">Galería</strong></a>
+            </li>
+            <li>
+              <a href="PradoAndres.html"><strong class="peso">Servicios</strong></a>
+            </li>
+            <li>
+              <a href="MatamorosJoaquin.html"><strong class="peso">Q&A</strong></a>
+            </li>
+            <li class="active">
+              <a href="AlvearBilly.html"><strong class="peso">Contacto</strong></a>
+            </li>
+          </ul>
 
-			<!--main-->
-			<main class="main">
-					<div class="mansion">
-						<img id="foto" src="assets/images/mansion.png" alt="mansion" />
-					</div>
+          <span class="btn_menu">
+            <i class="fas fa-bars"></i>
+          </span>
+        </nav>
+      </header>
 
-					<section class="mapa">
-						<h2 class="mapa">
-							<span><strong class="peso">Ubicación</strong></span>
-						</h2>
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7973.747309835146!2d-79.90484224245402!3d-2.2014344736543854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6e1aa33288d9%3A0x2727f8878aee3a6a!2zMsKwMTInMDAuMCJTIDc5wrA1NCczMS42Ilc!5e0!3m2!1ses!2sec!4v1639526910420!5m2!1ses!2sec"
-							width="450"
-							height="450"
-							style="border: 0"
-							allowfullscreen=""
-							loading="lazy"
-						></iframe>
-					</section>
+      <!--main-->
+      <main class="main">
+        <div class="mansion">
+          <img id="foto" src="assets/images/mansion.png" alt="mansion" />
+        </div>
 
-					<section class="ubicanos">
-						<h2>
-							<span><strong class="peso">Ubícanos</strong></span>
-						</h2>
-						<div class="textwidget">
-							<h2>
-								<span><strong class="peso">Dirección:</strong></span>
-							</h2>
-							<address class="light">Caliuchima 3316 entre la 9na y la 10ma</address>
-							<h2>
-								<span><strong class="peso">Teléfonos:</strong></span>
-							</h2>
-							<span class="light">5048853 / 0994115076</span>
-							<h2>
-								<span><strong class="peso">Email:</strong></span>
-							</h2>
-							<a class="light" href="mailto:alvearbilly@gmail.com"
-								>alvearbilly@gmail.com</a
-							>
-							<h2>
-								<span><strong class="peso">Redes:</strong></span>
-							</h2>
-							<div>
-								<a
-									href="https://wa.me/5930994115076/?text=Buenas%20deseo%20una%20cotización"
-									target="_blank"
-								>
-									<img
-										src="assets/images/wslogobk.png"
-										width="52"
-										height="52"
-										alt="ws logo"
-									/>
-								</a>
-								<a href="https://www.facebook.com/billy.alvear.1/" target="_blank">
-									<img
-										src="assets/images/fblogobk.png"
-										width="46"
-										height="46"
-										alt="fb logo"
-									/>
-								</a>
-								<a href="https://www.instagram.com/blilllly/?hl=es-la" target="_blank">
-									<img
-										src="assets/images/instalogobk.png"
-										width="46"
-										height="46"
-										alt="instagram logo"
-									/>
-								</a>
-							</div>
-						</div>
+        <section class="mapa">
+          <h2 class="mapa">
+            <span><strong class="peso">Ubicación</strong></span>
+          </h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7973.747309835146!2d-79.90484224245402!3d-2.2014344736543854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6e1aa33288d9%3A0x2727f8878aee3a6a!2zMsKwMTInMDAuMCJTIDc5wrA1NCczMS42Ilc!5e0!3m2!1ses!2sec!4v1639526910420!5m2!1ses!2sec"
+            width="450"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </section>
 
-							<form action="AlvearBilly_formulario.html">
-								<button class="boton">
-									<span class="icono_btn">
-										<i class="fas fa-arrow-right"></i>
-									</span>
-									<span>Formulario</span>
-								</button>
-							</form>
-							
-					</section>
+        <section class="ubicanos">
+          <h2>
+            <span><strong class="peso">Ubícanos</strong></span>
+          </h2>
+          <div class="textwidget">
+            <h2>
+              <span><strong class="peso">Dirección:</strong></span>
+            </h2>
+            <address class="light">Caliuchima 3316 entre la 9na y la 10ma</address>
+            <h2>
+              <span><strong class="peso">Teléfonos:</strong></span>
+            </h2>
+            <span class="light">5048853 / 0994115076</span>
+            <h2>
+              <span><strong class="peso">Email:</strong></span>
+            </h2>
+            <a class="light" href="mailto:alvearbilly@gmail.com">alvearbilly@gmail.com</a>
+            <h2>
+              <span><strong class="peso">Redes:</strong></span>
+            </h2>
+            <div>
+              <a
+                href="https://wa.me/5930994115076/?text=Buenas%20deseo%20una%20cotización"
+                target="_blank"
+              >
+                <img src="assets/images/wslogobk.png" width="52" height="52" alt="ws logo" />
+              </a>
+              <a href="https://www.facebook.com/billy.alvear.1/" target="_blank">
+                <img src="assets/images/fblogobk.png" width="46" height="46" alt="fb logo" />
+              </a>
+              <a href="https://www.instagram.com/blilllly/?hl=es-la" target="_blank">
+                <img
+                  src="assets/images/instalogobk.png"
+                  width="46"
+                  height="46"
+                  alt="instagram logo"
+                />
+              </a>
+            </div>
+          </div>
 
-					<section class="parrafo">
-						<hr />
-						<h2 class="centrar">
-							<strong class="peso">Cotización para tu boda o evento en Ecuador</strong>
-						</h2>
-						<div >
-							<p class="centrar">
-								Con un par de clics, podrás solicitar tu cotización personalizada para
-								tu Boda ó Evento en:
-								<strong class="peso">
-									Quito, Guayaquil, Cuenca, Manta, Ambato, Santo Domingo de los
-									Tsáchilas, Ibarra, Riobamba, Esmeraldas; o en la ciudad que
-									residas.</strong
-								>
-							</p>
-							<p class="centrar">
-								Envía tus datos al whatsapp para que uno de nuestros asesores se
-								comunique con tigo.
-							</p>
-							<br />
-							
-						</div>
-						<hr />
-					</section>
-			</main>
+          <form action="AlvearBilly_formulario.html">
+            <button class="boton">
+              <span class="icono_btn">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+              <span>Formulario</span>
+            </button>
+          </form>
+        </section>
 
-			
+        <section class="parrafo">
+          <hr />
+          <h2 class="centrar">
+            <strong class="peso">Cotización para tu boda o evento en Ecuador</strong>
+          </h2>
+          <div>
+            <p class="centrar">
+              Con un par de clics, podrás solicitar tu cotización personalizada para tu Boda ó
+              Evento en:
+              <strong class="peso">
+                Quito, Guayaquil, Cuenca, Manta, Ambato, Santo Domingo de los Tsáchilas, Ibarra,
+                Riobamba, Esmeraldas; o en la ciudad que residas.</strong
+              >
+            </p>
+            <p class="centrar">
+              Envía tus datos al whatsapp para que uno de nuestros asesores se comunique con tigo.
+            </p>
+            <br />
+          </div>
+          <hr />
+        </section>
+      </main>
 
-			<!--footer-->
-			<footer class="abajo">
-				<!--TODO copiar y pegar partes que se van a repetir a lo largo de todas las páginas-->
-				<div class="footer">
-					<p class="rights">
-						Copyright 2021 todos los derechos reservados |
-						<a href="#"> Cambiar Idioma</a>
-					</p>
-					<p class="volver">
-						<a href="#"
-							><img src="assets/images/subir2.png" alt="subir" height="80" width="100"
-						/></a>
-					</p>
-					<div class="contactos">
-						<h3>Comunicate con nosotros:</h3>
-						<p>Cell: <a>(04) xxxxxxxx</a></p>
-						<p>Correo: <a>fernando_leo99@hotmail.com</a></p>
-						<p>Telegram: <a>XXXXXXXXXX</a></p>
-					</div>
-					<div class="clearFloat"></div>
-					<div class="redes">
-						<h3>Visita nuestras redes sociales:</h3>
-						<p class="red">
-							<a href="https://www.facebook.com"
-								><img src="assets/images/face.png" alt="RF" height="80" width="100"
-							/></a>
-						</p>
-						<p class="red">
-							<a href="https://twitter.com/?lang=es"
-								><img src="assets/images/tw.png" alt="RT" height="80" width="100"
-							/></a>
-						</p>
-						<p class="red">
-							<a href="https://www.instagram.com/"
-								><img src="assets/images/insta.png" alt="RC" height="80" width="100"
-							/></a>
-						</p>
-						<div class="clearFloat"></div>
-					</div>
-					<div class="icon">
-						<p class="icono">
-							<img src="assets/images/icono.jpg" alt="Logo" height="200" width="200" />
-						</p>
-					</div>
-				</div>
-			</footer>
-		</div>
-	</body>
+      <!--footer-->
+      <footer class="abajo">
+        <!--TODO copiar y pegar partes que se van a repetir a lo largo de todas las páginas-->
+        <div class="footer">
+          <p class="rights">
+            Copyright 2021 todos los derechos reservados |
+            <a href="#"> Cambiar Idioma</a>
+          </p>
+          <p class="volver">
+            <a href="#"
+              ><img src="assets/images/subir2.png" alt="subir" height="80" width="100"
+            /></a>
+          </p>
+          <div class="contactos">
+            <h3>Comunicate con nosotros:</h3>
+            <p>Cell: <a>(04) xxxxxxxx</a></p>
+            <p>Correo: <a>fernando_leo99@hotmail.com</a></p>
+            <p>Telegram: <a>XXXXXXXXXX</a></p>
+          </div>
+          <div class="clearFloat"></div>
+          <div class="redes">
+            <h3>Visita nuestras redes sociales:</h3>
+            <p class="red">
+              <a href="https://www.facebook.com"
+                ><img src="assets/images/face.png" alt="RF" height="80" width="100"
+              /></a>
+            </p>
+            <p class="red">
+              <a href="https://twitter.com/?lang=es"
+                ><img src="assets/images/tw.png" alt="RT" height="80" width="100"
+              /></a>
+            </p>
+            <p class="red">
+              <a href="https://www.instagram.com/"
+                ><img src="assets/images/insta.png" alt="RC" height="80" width="100"
+              /></a>
+            </p>
+            <div class="clearFloat"></div>
+          </div>
+          <div class="icon">
+            <p class="icono">
+              <img src="assets/images/icono.jpg" alt="Logo" height="200" width="200" />
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
