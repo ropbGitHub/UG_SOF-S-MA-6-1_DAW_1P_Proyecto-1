@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+  <head>
+    <title>Formulario_Registro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+    />
+    <style>
+      * {
+        font-family: Arial;
+      }
+      body {
+        background-image: url(assets/images/fondo_form.jpg);
+        background-size: cover;
+      }
+      .container {
+        max-width: 800px;
+        background-color: #ddd;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      #TC a {
+        text-decoration: none;
+      }
+      #TC a:hover {
+        color: black;
+        text-decoration: underline;
+      }
+      #boton {
+        background-color: #ddd;
+        padding: 3px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+      #boton2 {
+        background-color: #ddd;
+        padding: 3px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+      .Co {
+        padding: 5px 40px;
+        border-bottom: 1px solid #fff;
+      }
+      .Cuadro {
+        padding: 20px 40px 5px;
+        border-bottom: 1px solid #fff;
+      }
+      #TC {
+        padding: 5px 40px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <br />
+      <div class="container">
+        <div class="row" style="border-bottom: 3px solid #fff; padding: 2px">
+          <h1 class="elemento col-md-4" style="font-size: 50px">Preguntanos</h1>
+        </div>
+        <div class="row">
+          <section class="Cuadro">
+            <h5 style="color: #666666">Ingrese sus datos:</h5>
+            <input
+              type="text"
+              name="Nombres"
+              id="nombres"
+              placeholder="Ingrese su Nombre"
+              class="elemento col-md-5"
+            />
+            <input
+              type="text"
+              name="Apellidos"
+              id="apellidos"
+              placeholder="Ingrese su Apellido"
+              class="elemento col-md-5"
+            />
+          </section>
+        </div>
+        <div class="row">
+          <section class="Co">
+            <h5 style="color: #666666">Seleccione la categoría de su pregunta:</h5>
+            <select class="elemento col-md-2">
+              <option selected>Seleccione</option>
+              <option>Binaria</option>
+              <option>Categórica</option>
+              <option>Informativa</option>
+            </select>
+          </section>
+        </div>
+        <div class="row">
+          <section class="Co">
+            <h5 style="color: #666666; padding: 5px 0px">Seleccione una etiqueta:</h5>
+            <section class="elemento col-md-4">
+              <h5 style="color: #666666">Tipo Pregunta</h5>
+              <input type="radio" name="bebida" value="agua" />Espacio<br />
+              <input type="radio" name="bebida" value="cerveza" />Precio<br />
+              <input type="radio" name="bebida" value="vino" />Otros<br />
+            </section>
+          </section>
+        </div>
+        <div class="row">
+          <section class="Co">
+            <h5 style="color: #666666">Ingrese su pregunta:</h5>
+            <textarea class="elemento col-md-10" name="Tx1" rows="6" cols="64">
+Area de texto</textarea
+            >
+          </section>
+        </div>
+        <div class="row">
+          <section class="Co">
+            <h5 style="color: #666666">Sugerencias/Quejas</h5>
+            <textarea class="elemento col-md-10" name="Tx2" rows="6" cols="64">
+Ayúdanos a mejorar</textarea
+            >
+          </section>
+        </div>
+        <div class="row">
+          <div id="TC" class="elemento col-md-7">
+            <input type="checkbox" name="bebida" value="agua" />Estoy de acuerdo con
+            <a href="#">Terminos y Condiciones</a>
+          </div>
+        </div>
+      </div>
+    </form>
+    <br />
+    <div class="row">
+      <div class="col text-center">
+        <button id="boton" onclick="location.href='#'" class="elemento col-md-2">Aceptar</button>
+        <button
+          id="boton2"
+          onclick="location.href='MatamorosJoaquin.html'"
+          class="elemento col-md-2"
+        >
+          Regresar
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

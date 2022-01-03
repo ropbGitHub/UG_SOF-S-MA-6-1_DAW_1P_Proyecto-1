@@ -1,0 +1,64 @@
+/*!-----------------------Andrés--------------------------!*/
+/*!-----------------------SERVICIOS_Andrés--------------------------!*/
+.h2prado {
+  text-align: center;
+}
+
+.h3prado {
+  margin-bottom: 5px;
+  font-size: 100%;
+  font-weight: 505;
+  font-size: 20px;
+  text-align: center;
+}
+
+.textoprado {
+  text-align: justify;
+  padding: 0px 20px;
+  font-size: 100%;
+}
+
+.tamanioimg {
+  max-width: 400px;
+  max-height: 250px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.tamanio_caja_prado {
+  margin: 20px;
+  padding: 1px;
+  float: left;
+  width: 45%;
+}
+
+.boton_cotizacion {
+  position: sticky;
+  bottom: 200px;
+  right: 10px;
+  float: right;
+}
+
+/*!-----------------------FORMULARIO_COTIZACION_Andrés--------------------------!*/
+
+.bloque_formulario_prado {
+  margin: auto;
+  font-size: 20px;
+  text-align: left;
+}
+
+input.texto_formulario_prado {
+  width: 35%;
+  padding: 5px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.boton_enviar_prado {
+  width: 10%;
+  margin-left: 45%;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+}

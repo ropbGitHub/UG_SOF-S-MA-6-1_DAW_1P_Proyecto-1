@@ -1,0 +1,124 @@
+/*!-----------------------Renán---------------------------!*/
+
+/**-----------------------Global--------------------------**/
+
+* {
+  box-sizing: border-box;
+}
+
+/**-----------------------Section--------------------------**/
+
+[class*="section-"] {
+  /* <section> is a block element*/
+  display: block;
+}
+
+.section-banner {
+  width: 100%;
+}
+
+.section-article {
+  width: 80%;
+  background-color: #f7e0e0;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 1%;
+}
+
+/**-----------------------Section-Banner--------------------------**/
+
+.section-banner img {
+  /* <img> is a inline element*/
+  width: 100%;
+}
+
+/**-----------------------Section-Article--------------------------**/
+
+.section-article article {
+  /* <article> is a block element*/
+  /* display: block; */
+  /* height: 150%; */
+  /* max-width: 100%; */
+  padding: 2.5%;
+
+  /* margin-bottom: 2.5%; */
+  border-radius: 10px;
+  outline: 2px solid #fff;
+}
+
+.section-article article:hover {
+  background: linen;
+}
+
+[class*="article-content-"] {
+  /* <div> is a block element*/
+  display: inline-block;
+  width: 49.8%;
+  /* width: 50%; */
+}
+
+.article-content-left {
+  /* <img> is a inline element*/
+  /* width: 100%; */
+  max-width: 100%;
+}
+.article-content-right {
+  padding-left: 5%;
+  max-width: 100%;
+}
+
+h3,
+h4,
+time {
+  padding: 6%;
+}
+
+article footer {
+  /* <footer> is a block element*/
+  display: inline-block;
+  /* outline: green; */
+}
+
+article p {
+  padding-bottom: 10%;
+}
+
+article a {
+  font-size: 135%;
+}
+
+button {
+  /* <button> is a inline element*/
+  background-color: #f7e0e0;
+  color: #0066ff;
+  font-weight: 400;
+  font-size: 129%;
+  position: relative;
+  border: none;
+  transition: 0.2s ease-in;
+}
+
+button::before,
+button::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+}
+
+button:hover {
+  box-shadow: 10px 10px 0px #ff96ad;
+  top: -5px;
+  left: -5px;
+}
+
+#btn-form {
+  padding: 5%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* 
+display: inline, 
+display: block, 
+display: inline-block
+*/
