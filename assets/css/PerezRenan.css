@@ -25,9 +25,9 @@
   padding: 1%;
 }
 
-/**-----------------------Section-Banner--------------------------**/
+/**---------------------------Banner--------------------------------**/
 
-.section-banner img {
+#banner img {
   /* <img> is a inline element*/
   width: 100%;
 }

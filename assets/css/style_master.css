@@ -19,29 +19,12 @@ body {
 }
 
 /*Apply changes to main div class*/
-.agrupar {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-}
 
-.contenedor {
-  width: 80%;
-  /* max-width: 1700px; */
-  max-width: 100%;
-  background-color: #f7e0e0;
-  margin: auto;
-  margin-top: 1%;
-  padding: 1%;
-}
-
-/*Apply changes to h1 tag*/
 h1 {
   font-size: 250%;
   font-weight: 700;
 }
 
-/*Apply changes to h2 tag*/
 h2 {
   /*font-size: 100%;*/
   /*font-weight: 600;*/
@@ -51,7 +34,6 @@ h2 {
   color: #0066ff;
 }
 
-/*Apply changes to h3 tag*/
 h3 {
   font-size: 175%;
   font-weight: 400;
@@ -78,6 +60,22 @@ p {
 
 main {
   padding-bottom: 3%;
+}
+
+.agrupar {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.contenedor {
+  width: 80%;
+  /* max-width: 1700px; */
+  max-width: 100%;
+  background-color: #f7e0e0;
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
 }
 
 .gale {
