@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/AlvearBilly.css" />
     <!-- Javascript -->
     <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/app_alvear.js" defer></script>
     <!-- ICONO MENU -->
     <script src="https://kit.fontawesome.com/7f7aa7ef65.js" crossorigin="anonymous"></script>
     <!-- browser tab icon-->
@@ -65,100 +66,91 @@
         </nav>
       </header>
 
-      <main>
-        <div class="contenedor">
-          <div class="gale">
-            <!-- section-->
-            <h2>¿Desea obtener otro método de contacto?</h2>
-            <span>(De no desearlo, por favor no realizar el formulario...)</span>
-            <section class="section">
-              <h4>Tómese su tiempo...</h4>
-              <form class="block_form">
-                <br /><label class="Texto"> Ingrese su correo electronico:</label>
-                <input
-                  class="block_form"
-                  type="email"
-                  id="idEmail"
-                  name="email"
-                  placeholder="example@hotmail.com"
-                /><br />
-
-                <br /><label class="Texto"> Ingrese el nuevo método:</label>
-                <input
-                  class="block_form"
-                  type="text"
-                  id="idNewMet"
-                  name="cantidad_per"
-                  placeholder="Telegram"
-                /><br />
-
-                <br /><label class="Texto"> Seleccione motivo:</label><br />
-                <br /><input
-                  class=""
-                  type="checkbox"
-                  id="idMotivo1"
-                  name="motivo"
-                  value="Comodidad"
-                />
-                Comodidad<br />
-                <br /><input
-                  class=""
-                  type="checkbox"
-                  id="idMotivo2"
-                  name="motivo"
-                  value="Experiencia de uso"
-                />
-                Experiencia de uso<br />
-                <br /><input
-                  class=""
-                  type="checkbox"
-                  id="idMotivo3"
-                  name="motivo"
-                  value="Accesibilidad"
-                />
-                Accesibilidad<br />
-
-                <br /><label class="Texto"
-                  >¿Cree que esto ayudaría a más clientes o solo a usted?:</label
-                ><br />
-                <br /><input class="" type="checkbox" id="idMas1" name="mss" value="A muchos" /> A
-                muchos<br />
-                <br /><input
-                  class=""
-                  type="checkbox"
-                  id="idMas2"
-                  name="mss"
-                  value="Solo a mí, disculpe las molestias"
-                />
-                Solo a mí, disculpe las molestias<br />
-
-                <br /><label class="Texto">¿Su experiencia en nuestra página fue agradable?:</label
-                ><br />
-                <br /><input
-                  class=""
-                  type="checkbox"
-                  id="idAgr1"
-                  name="mss"
-                  value="Sí, muy bonita"
-                />
-                Sí, muy bonita<br />
-                <br /><input
-                  class=""
-                  type="checkbox"
-                  id="idAgr2"
-                  name="mss"
-                  value="No, me estreso mucho"
-                />
-                No, me estreso mucho<br />
-
-                <br /><label class="Texto"> Agende cita con nosotros:</label>
-                <input class="block_form" type="date" id="idFecha" name="fecha" /><br />
-
-                <br /><input class="btn_send" type="submit" value="Enviar" /><br />
-              </form>
-            </section>
+      <main class="main_form">
+        <p class="par_formulario">Contáctese con Nosotros</p><br>
+        <form class="formulario" id="formulario">
+          <!-- Grupo: Cedula -->
+          <div class="formulario__grupo" id="grupo__cedula">
+            <label for="cedula" class="formulario__label">Cédula *</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="cedula" id="cedula" placeholder="0999999992">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La cédula tiene que ser de 10 dígitos y solo puede contener numeros.</p>
           </div>
-        </div>
+    
+          <!-- Grupo: Nombre -->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre *</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Billy Alvear">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 caracteres y solo puede contener letras.</p>
+          </div>
+    
+          <!-- Grupo: Fecha -->
+          <div class="formulario__grupo" id="grupo__fecha">
+            <label for="fecha" class="formulario__label">Fecha</label>
+            <div class="formulario__grupo-input">
+              <input type="date" class="formulario__input" name="fecha" id="fecha" onkeydown="return false">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Elija una fecha para contactarlo.</p>
+          </div>
+    
+          <!-- Grupo: Motivo -->
+          <div class="formulario__grupo" id="grupo__motivo">
+            <label for="motivo" class="formulario__label">Motivo</label>
+            <div class="formulario__grupo-input">
+              <select id="motivo" name="motivo" class="formulario__input">
+                <option value="0">Cotización</option>
+                <option value="1">Reconocimiento</option>
+                <option value="2">Trabajo</option>
+                <option value="3">Documentación</option>
+              </select>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Elija un motivo de contacto.</p>
+          </div>
+    
+          <!-- Grupo: Correo Electronico -->
+          <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label">Correo Electrónico *</label>
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+          </div>
+    
+          <!-- Grupo: Teléfono -->
+          <div class="formulario__grupo" id="grupo__telefono">
+            <label for="telefono" class="formulario__label">Teléfono *</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El teléfono tiene que ser de 10 dígitos y solo puede contener numeros.</p>
+          </div>
+    
+          <!-- Grupo: Terminos y Condiciones -->
+          <div class="formulario__grupo" id="grupo__terminos">
+            <label class="formulario__label">
+              <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+              Acepto los Terminos y Condiciones *
+            </label>
+          </div>
+    
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+          </div>
+    
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+          </div>
+        </form>
       </main>
 
       <!-- footer-->
