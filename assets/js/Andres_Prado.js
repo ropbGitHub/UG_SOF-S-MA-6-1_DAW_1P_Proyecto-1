@@ -9,8 +9,10 @@ function validarDatos(event) {
     var txtemail = document.getElementById("idEmail");
     //var txtNumero = document.getElementById("idCantidadPer");
     var txtFecha = document.getElementById("idFecha");
+    var btnRadios = document.getElementsByName("salon");
     var letra = /^[a-z ,.'-]+$/i;// letrasyespacio   ///^[A-Z]+$/i;// solo letras
     var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
 
     limpiarMensajes();
 
@@ -19,8 +21,10 @@ function validarDatos(event) {
     validarCorreoElectronico(txtemail, resultado, correo, mensaje);
     //validarNumero();
     validarFecha(txtFecha, resultado, mensaje);
+    validarRadio(btnRadios, resultado, mensaje);
 
-    if (!validarNombre.resultado || !validarApellido.resultado || !validarCorreoElectronico.resultado || !validarFecha.resultado) {
+    if (!validarNombre.resultado || !validarApellido.resultado || !validarCorreoElectronico.resultado || !validarFecha.resultado
+        || !validarRadio.resultado) {
         event.preventDefault();  // detener el evento  //stop form from submitting
     }
 }
@@ -83,6 +87,21 @@ function validarFecha(txtFecha, resultado) {
 
 }
 
+function validarRadio(btnRadios, resultado) {
+    var sel = false;
+    for (let i = 0; i < btnRadios.length; i++) {
+        if (btnRadios[i].checked) {
+            sel = true;
+            let res = btnRadios[i].value;
+
+            break;
+        }
+    }
+    if (!sel) {
+        resultado = false;
+        mensaje("Debe seleccionar un genero", btnRadios[0]);
+    }
+}
 
 function mensaje(cadenaMensaje, elemento) {
     elemento.focus();
