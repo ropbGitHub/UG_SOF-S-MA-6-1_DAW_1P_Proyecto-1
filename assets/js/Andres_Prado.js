@@ -7,34 +7,28 @@ function validarDatos(event) {
     var txtNombre = document.getElementById("idNombre");
     var txtApellido = document.getElementById("idApellido");
     var txtemail = document.getElementById("idEmail");
-    //var txtNumero = document.getElementById("idCantidadPer");
+    var txtNumero = document.getElementById("idCantidadPer");
     var txtFecha = document.getElementById("idFecha");
     var btnRadios = document.getElementsByName("salon");
     var letra = /^[a-z ,.'-]+$/i;// letrasyespacio   ///^[A-Z]+$/i;// solo letras
     var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
 
     limpiarMensajes();
 
     validarNombre(txtNombre, resultado, letra, mensaje);
     validarApellido(txtApellido, resultado, letra, mensaje);
     validarCorreoElectronico(txtemail, resultado, correo, mensaje);
-    //validarNumero();
+    validarNumero(txtNumero, resultado, mensaje);
     validarFecha(txtFecha, resultado, mensaje);
     validarRadio(btnRadios, resultado, mensaje);
-
-    // if (!validarNombre.resultado || !validarApellido.resultado || !validarCorreoElectronico.resultado || !validarFecha.resultado
-    //     || !validarRadio.resultado) {
-    //     event.preventDefault();  // detener el evento  //stop form from submitting
-    // }
 
     validacionDeCampos();
 }
 
 function validacionDeCampos() {
 
-    if (!validarNombre.resultado || !validarApellido.resultado || !validarCorreoElectronico.resultado || !validarFecha.resultado
-        || !validarRadio.resultado) {
+    if (!validarNombre.resultado || !validarApellido.resultado || !validarCorreoElectronico.resultado || !validarNumero.resultado
+        || !validarFecha.resultado || !validarRadio.resultado) {
         event.preventDefault();  // detener el evento  //stop form from submitting
     }
 }
@@ -77,23 +71,28 @@ function validarCorreoElectronico(txtemail, resultado, correo) {
     }
 }
 
+function validarNumero(txtNumero, resultado) {
+    if (txtNumero.value === '') {
+        resultado = false;
+        mensaje("Numero es requerido", txtNumero, mensaje);
+    }
+}
 function validarFecha(txtFecha, resultado) {
     // validacion de fecha
     var dato = txtFecha.value;
-    var fechaN = new Date(dato);
-    var anioN = fechaN.getFullYear();
+
+    var fechaI = new Date(dato);
+    var anioI = fechaI.getFullYear();
 
     var fechaActual = new Date();// fecha actual
     var anioA = fechaActual.getFullYear();
-    if (fechaN > fechaActual) {
+
+    if (fechaI < fechaActual) {
         resultado = false;
-        mensaje("Fecha no puede ser superior a la actual", txtFecha);
-    } else if (anioN < 1930) {
+        mensaje("La fecha no puede ser inferior o igual a la fecha actual", txtFecha);
+    } else if (anioI > anioA) {
         resultado = false;
-        mensaje("Anio de nacimiento no puede ser menor a 1930", txtFecha);
-    } else if ((anioA - anioN) < 18) {
-        resultado = false;
-        mensaje("debe ser mayor de 18 años", txtFecha);
+        mensaje("Debe ser del año actual", txtFecha);
     }
 
 }
