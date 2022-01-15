@@ -62,3 +62,12 @@ input.texto_formulario_prado {
   font-size: 20px;
   text-align: center;
 }
+
+.row {
+  padding: 5px;
+}
+
+.mensajeError{
+  color:red;
+  font-size: 9px;
+  }
