@@ -1,4 +1,3 @@
-<!-- FALTA NUEVO HEADER BILLY-->
 <!DOCTYPE html>
 <html lang="es">
   <!--head-->
@@ -17,7 +16,10 @@
     <!-- Javascript -->
     <script src="assets/js/app.js" defer></script>
     <!-- ICONO MENU -->
-    <script src="https://kit.fontawesome.com/7f7aa7ef65.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7f7aa7ef65.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- browser tab icon-->
     <link rel="icon" href="assets/images/logo.png" />
     <!-- font external reference-->
@@ -47,16 +49,24 @@
               <a href="index.html"><strong class="peso">Inicio</strong></a>
             </li>
             <li>
-              <a href="GonzalezEmily.html"><strong class="peso">Galería</strong></a>
+              <a href="GonzalezEmily.html"
+                ><strong class="peso">Galería</strong></a
+              >
             </li>
             <li class="active">
-              <a href="PradoAndres.html"><strong class="peso">Servicios</strong></a>
+              <a href="PradoAndres.html"
+                ><strong class="peso">Servicios</strong></a
+              >
             </li>
             <li>
-              <a href="MatamorosJoaquin.html"><strong class="peso">Q&A</strong></a>
+              <a href="MatamorosJoaquin.html"
+                ><strong class="peso">Q&A</strong></a
+              >
             </li>
             <li>
-              <a href="AlvearBilly.html"><strong class="peso">Contacto</strong></a>
+              <a href="AlvearBilly.html"
+                ><strong class="peso">Contacto</strong></a
+              >
             </li>
           </ul>
 
@@ -72,70 +82,58 @@
             <!-- section-->
             <section class="section">
               <h2 class="h2prado">Formulario de Cotizacion</h2>
-              <form class="bloque_formulario_prado">
-                <br /><label> Ingrese su nombre:</label><br />
-                <input
-                  class="texto_formulario_prado"
-                  type="text"
-                  id="idNombre"
-                  name="nombre"
-                  placeholder="Nombre"
-                /><br />
+              <form id="formulario_cotizacion" class="bloque_formulario_prado">
+                <!-- Nombre -->
+                <div class="row">
+                  <label> Ingrese su nombre:</label><br />
+                  <input class="texto_formulario_prado" type="text" id="idNombre" name="nombre" placeholder="Nombre" /><br />
+                </div>
+                <!-- apellido -->
+                <div class="row">
+                  <label> Ingrese su apellido:</label><br />
+                  <input class="texto_formulario_prado" type="text" id="idApellido" name="apellido" placeholder="Apellido"
+                  /><br />
+                </div>
+                <!-- correo electronico -->
+                <div class="row">
+                  <label> Ingrese su correo electronico:</label><br />
+                  <input class="texto_formulario_prado" type="email" id="idEmail" name="email" placeholder="example@hotmail.com" /><br />
+                </div>
+                <!-- cantidad de personas -->
+                <div class="row">
+                  <label> Ingrese la cantidad de personas(por cuestiones de la pandemia, se redució el aforo):</label><br />
+                  <input class="texto_formulario_prado" type="number" id="idCantidadPer" name="cantidad_per" placeholder="1" min="1" max="30" pattern="^[0-9]+"/><br />
+                </div>
+                <!-- fecha del evento -->
+                <div class="row">
+                  <label> Seleccione la fecha del evento:</label><br />
+                  <input class="texto_formulario_prado" type="date" id="idFecha" name="fecha" /><br />
+                </div>
+                <!-- tipo de salon -->
+                <div class="row">
+                    <label>Seleccione el tipo de salón para el evento:</label><br />
+                    <input class="form_salon" id="idSalon1" type="radio" name="salon" value="Vic"/>Victoria<br />
+                    <input class="form_salon" id="idSalon2" type="radio" name="salon" value="Vis"/>Vista<br />
+                    <input class="form_salon" id="idSalon3" type="radio" name="salon" value="Pic"/>Picaddily<br />
+                    <input class="form_salon" id="idSalon4" type="radio" name="salon" value="Bris"/>Bristol<br />
+                </div>
+                <!-- servicios del evento -->
+                <div class="row">
+                  <div >
+                      <label>Seleccione los servicios para el evento:</label><br />
+                    Decoración <input type="checkbox" name="servicio" value="1" id="idServicio1" class="formItem sus"/><br />
+                    Buffet <input type="checkbox" name="servicio" value="2" id="idServicio2" class="formItem sus"/><br />
+                    Iluminación <input type="checkbox" name="servicio" value="3" id="idServicio3" class="formItem sus"/><br />
+                    Audio y Video <input type="checkbox" name="servicio" value="4" id="idServicio4" class="formItem sus"/><br />
+                  </div>
+              </div>
+              <!-- Boton enviar -->
+              <div class="row">
+                  <div>
+                      <input type="submit" class="boton_enviar_prado" value="Enviar">
+                  </div>
+              </div>
 
-                <br /><label> Ingrese su apellido:</label><br />
-                <input
-                  class="texto_formulario_prado"
-                  type="text"
-                  id="idApellido"
-                  name="apellido"
-                  placeholder="Apellido"
-                /><br />
-
-                <br /><label> Ingrese su correo electronico:</label><br />
-                <input
-                  class="texto_formulario_prado"
-                  type="email"
-                  id="idEmail"
-                  name="email"
-                  placeholder="example@hotmail.com"
-                /><br />
-
-                <br /><label> Ingrese la cantidad de personas:</label><br />
-                <input
-                  class="texto_formulario_prado"
-                  type="number"
-                  id="idCantidadPer"
-                  name="cantidad_per"
-                  placeholder="1"
-                /><br />
-
-                <br /><label> Seleccione la fecha del evento:</label><br />
-                <input class="texto_formulario_prado" type="date" id="idFecha" name="fecha" /><br />
-                <br /><label> Seleccione el tipo de salon para el evento:</label><br />
-                <br /><input type="radio" id="idSalon1" name="Salon1" />Victoria
-                <br />
-
-                <br /><input type="radio" id="idSalon2" name="Salon2" /> Vista
-                <br />
-
-                <br /><input type="radio" id="idSalon3" name="Salon3" /> Picaddily <br />
-
-                <br /><input type="radio" id="idSalon4" name="Salon4" /> Bristol
-                <br />
-
-                <br /><label> Seleccione los servicios para el evento:</label><br />
-                <br /><input type="checkbox" id="idServicio1" name="servicio1" /> Decoración<br />
-
-                <br /><input type="checkbox" id="idServicio2" name="servicio2" /> Buffet<br />
-
-                <br /><input type="checkbox" id="idServicio3" name="servicio3" /> Iluminación<br />
-
-                <br /><input type="checkbox" id="idServicio4" name="servicio4" /> Audio y Video<br />
-
-                <br /><input class="boton_enviar_prado" type="submit" value="Enviar" /> <br /><span
-                  >Una vez dado click al boton "enviar", por favor revise la bandeja de entrada del
-                  correo electronico ingresado :D</span
-                >
               </form>
             </section>
           </div>
@@ -152,7 +150,11 @@
           </p>
           <p class="volver">
             <a href="#"
-              ><img src="assets/images/subir2.png" alt="subir" height="80" width="100"
+              ><img
+                src="assets/images/subir2.png"
+                alt="subir"
+                height="80"
+                width="100"
             /></a>
           </p>
           <div class="contactos">
@@ -166,28 +168,47 @@
             <h3>Visita nuestras redes sociales:</h3>
             <p class="red">
               <a href="https://www.facebook.com"
-                ><img src="assets/images/face.png" alt="RF" height="80" width="100"
+                ><img
+                  src="assets/images/face.png"
+                  alt="RF"
+                  height="80"
+                  width="100"
               /></a>
             </p>
             <p class="red">
               <a href="https://twitter.com/?lang=es"
-                ><img src="assets/images/tw.png" alt="RT" height="80" width="100"
+                ><img
+                  src="assets/images/tw.png"
+                  alt="RT"
+                  height="80"
+                  width="100"
               /></a>
             </p>
             <p class="red">
               <a href="https://www.instagram.com/"
-                ><img src="assets/images/insta.png" alt="RC" height="80" width="100"
+                ><img
+                  src="assets/images/insta.png"
+                  alt="RC"
+                  height="80"
+                  width="100"
               /></a>
             </p>
             <div class="clearFloat"></div>
           </div>
           <div class="icon">
             <p class="icono">
-              <img src="assets/images/icono.jpg" alt="Logo" height="200" width="200" />
+              <img
+                src="assets/images/icono.jpg"
+                alt="Logo"
+                height="200"
+                width="200"
+              />
             </p>
           </div>
         </div>
       </footer>
     </div>
+    <!-- Enlance externo al JavaScript de Prado -->
+    <script src="assets/js/Andres_Prado.js"></script>
   </body>
 </html>
