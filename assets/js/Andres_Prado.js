@@ -23,11 +23,22 @@ function validarDatos(event) {
     validarFecha(txtFecha, resultado, mensaje);
     validarRadio(btnRadios, resultado, mensaje);
 
+    // if (!validarNombre.resultado || !validarApellido.resultado || !validarCorreoElectronico.resultado || !validarFecha.resultado
+    //     || !validarRadio.resultado) {
+    //     event.preventDefault();  // detener el evento  //stop form from submitting
+    // }
+
+    validacionDeCampos();
+}
+
+function validacionDeCampos() {
+
     if (!validarNombre.resultado || !validarApellido.resultado || !validarCorreoElectronico.resultado || !validarFecha.resultado
         || !validarRadio.resultado) {
         event.preventDefault();  // detener el evento  //stop form from submitting
     }
 }
+
 function validarNombre(txtNombre, resultado, letra) {
 
     if (txtNombre.value === '') {
