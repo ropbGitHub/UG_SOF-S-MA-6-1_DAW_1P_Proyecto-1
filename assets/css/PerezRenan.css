@@ -9,6 +9,7 @@
   --fs-500: 1.25rem;
   --fs-400: 1rem;
   --bg-clr: linen;
+  --btn-color: #0066ff;
 }
 
 @media (max-width: 90em) {
@@ -116,17 +117,19 @@ button::after {
   z-index: -1;
 }
 
-#btn-form:hover {
-  box-shadow: 10px 10px 0px #ff96ad;
-  top: -5px;
-  left: -5px;
-  color: #5432c6;
-}
-
 #btn-form {
   font-size: var(--fs-500);
   display: block;
+  border-radius: 5px;
   background-color: #f7e0e0;
+}
+
+#btn-form:hover {
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.6);
+  top: -5px;
+  left: -5px;
+  color: white;
+  background-color: var(--btn-color);
 }
 
 .btn-art {
@@ -136,9 +139,9 @@ button::after {
 }
 
 .btn-art:hover {
-  box-shadow: 5px 5px 0px linen;
-  border-color: #5432c6;
-  color: #5432c6;
+  box-shadow: 3px 0px 15px rgba(163, 163, 163, 1);
+  border-color: var(--btn-color);
+  color: var(--btn-color);
 }
 
 /**-----------------------footer--------------------------**/
