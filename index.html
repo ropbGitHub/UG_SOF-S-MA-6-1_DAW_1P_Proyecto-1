@@ -10,6 +10,13 @@
     <meta name="author" content="Grupo 3 - Perez Renán" />
     <meta name="keywords" content="Salón de eventos" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <!-- CSS Style-->
     <link rel="stylesheet" href="assets/css/style_master.css" />
     <link rel="stylesheet" href="assets/css/PerezRenan.css" />
@@ -19,13 +26,28 @@
     <script src="https://kit.fontawesome.com/7f7aa7ef65.js" crossorigin="anonymous"></script>
     <!-- browser tab icon -->
     <link rel="icon" href="assets/images/logo.png" />
-    <!-- font external reference -->
+    <!-- Font external reference -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .brand {
+        position: relative;
+        text-align: center;
+      }
+      #success {
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-family: "Brush Script MT", cursive;
+      }
+    </style>
   </head>
 
   <!-- body -->
@@ -65,137 +87,175 @@
 
     <!-- main-->
     <main>
-      <!-- section 1-->
-      <div class="section-banner"><img src="assets/images/centro2.jpg" alt="vista" /></div>
-
-      <!-- section 2-->
-      <section class="section-article">
-        <h2>Nuestros Salones</h2>
-
-        <!-- article 1-->
-        <article id="acticle-1">
-          <img class="article-content-left" src="assets/images/Salon-VIctoria-1.jpg" alt="sv1" />
-          <div class="article-content-right">
-            <h3>Salón Victoria</h3>
-            <h4>Nuestro salón principal</h4>
-            <time datetime="2021-12-14">Publicado: 14-12-2021</time>
-            <p>
-              Tenemos un amplio y elegante local que hará de su evento social un recuerdo
-              inolvidable. Consulte nuestras ofertas para la organizacion de su compromiso social
-            </p>
-            <footer>
-              <a href="GonzalezEmily.html#img1"> Ver más...</a>
-            </footer>
+      <div class="container-fluid">
+        <!-- section 1 - Banner -->
+        <section id="section-banner" class="row">
+          <div class="col p-0 brand">
+            <h2 id="success">A Beautiful Journey To Remember</h2>
+            <img src="assets/images/centro2.jpg" alt="vista" />
           </div>
-        </article>
+        </section>
 
-        <!-- article 2-->
-        <article id="acticle-2">
-          <img class="article-content-left" src="assets/images/Salon-Vista-1.jpg" alt="sv1" />
-          <div class="article-content-right">
-            <h3>Salón Vista</h3>
-            <time datetime="2021-12-14">Publicado 14-12-2021</time>
-            <p>
-              Una propuesta de confort y calidad para su evento social. Contamos con un local
-              elegante y espacioso, ubicado en un lugar estratégico de nuestra ciudad.
-            </p>
-            <footer>
-              <a href="GonzalezEmily.html#img5"> Ver más...</a>
-            </footer>
+        <!-- section 2 - articles-->
+        <section id="section-article">
+          <div class="row">
+            <div class="col">
+              <h2>Nuestros Salones</h2>
+            </div>
           </div>
-        </article>
 
-        <!-- article 3-->
-        <article id="acticle-3">
-          <img
-            class="article-content-left"
-            src="assets/images/Salon-Picaddilly-Empresarial-1.jpg"
-            alt="sv1"
-          />
-          <div class="article-content-right">
-            <h3>Salón Piccadilly</h3>
-            <time datetime="2021-12-14">Publicado: 14-12-2021</time>
-            <p>
-              Ideal para reuniones, cumpleaños, matrimonios, bautizos, talleres, seminarios, eventos
-              familiares, lanzamientos y toda clase de eventos sociales.
-            </p>
-            <footer>
-              <a href="GonzalezEmily.html#img9"> Ver más...</a>
-            </footer>
+          <!-- article 1-->
+          <div class="row align-items-center">
+            <div class="col-lg-5 p-0">
+              <img class="img-fluid" src="assets/images/Salon-VIctoria-1.jpg" alt="sv1" />
+            </div>
+            <div class="col-lg-6">
+              <article id="acticle-1">
+                <h3>Salón Victoria</h3>
+                <time datetime="2021-12-14">Publicado: 14-12-2021</time>
+                <p>
+                  Tenemos un amplio y elegante local que hará de su evento social un recuerdo
+                  inolvidable. Consulte nuestras ofertas para la organizacion de su compromiso
+                  social
+                </p>
+                <footer>
+                  <form action="GonzalezEmily.html#img1">
+                    <button class="btn-art">Ver más...</button>
+                  </form>
+                </footer>
+              </article>
+            </div>
           </div>
-        </article>
 
-        <!-- article 4 -->
-        <article id="acticle-4">
-          <img
-            class="article-content-left"
-            src="assets/images/Salon-Bristol-Social-1.jpg"
-            alt="sv1"
-          />
-          <div class="article-content-right">
-            <h3>Salón Bristol</h3>
-            <time datetime="2021-12-14">Publicado: 14-12-2021</time>
-            <p>
-              Tenemos un amplio y elegante local que hará de su evento social un recuerdo
-              inolvidable. Consulte nuestras ofertas para la organizacion de su compromiso social
-            </p>
-            <footer>
-              <a href="GonzalezEmily.html#img14"> Ver más...</a>
-            </footer>
+          <!-- article 2-->
+          <div class="row align-items-center d-flex flex-row-reverse">
+            <div class="col-lg-5 p-0">
+              <img class="img-fluid" src="assets/images/Salon-Vista-1.jpg" alt="sv1" />
+            </div>
+            <div class="col-lg-6">
+              <article id="acticle-2">
+                <h3>Salón Vista</h3>
+                <time datetime="2021-12-14">Publicado 14-12-2021</time>
+                <p>
+                  Una propuesta de confort y calidad para su evento social. Contamos con un local
+                  elegante y espacioso, ubicado en un lugar estratégico de nuestra ciudad.
+                </p>
+                <footer>
+                  <form action="GonzalezEmily.html#img5">
+                    <button class="btn-art">Ver más...</button>
+                  </form>
+                </footer>
+              </article>
+            </div>
           </div>
-        </article>
-      </section>
 
-      <!-- section 3 -->
-      <div class="section-form">
-        <form action="./PerezRenan_formulario.html">
-          <button id="btn-form">Iniciar Sesion</button>
-        </form>
+          <!-- article 3-->
+          <div class="row align-items-center">
+            <div class="col-lg-5 p-0">
+              <img
+                class="img-fluid"
+                src="assets/images/Salon-Picaddilly-Empresarial-1.jpg"
+                alt="sv1"
+              />
+            </div>
+            <div class="col-lg-6">
+              <article id="acticle-3">
+                <h3>Salón Piccadilly</h3>
+                <time datetime="2021-12-14">Publicado: 14-12-2021</time>
+                <p>
+                  Ideal para reuniones, cumpleaños, matrimonios, bautizos, talleres, seminarios,
+                  eventos familiares, lanzamientos y toda clase de eventos sociales.
+                </p>
+                <footer>
+                  <form action="GonzalezEmily.html#img9">
+                    <button class="btn-art">Ver más...</button>
+                  </form>
+                </footer>
+              </article>
+            </div>
+          </div>
+
+          <!-- article 4 -->
+          <div class="row align-items-center flex-row-reverse">
+            <div class="col-lg-5 p-0">
+              <img class="img-fluid" src="assets/images/Salon-Bristol-Social-1.jpg" alt="sv1" />
+            </div>
+            <div class="col-lg-6">
+              <article id="acticle-4">
+                <h3>Salón Bristol</h3>
+                <time datetime="2021-12-14">Publicado: 14-12-2021</time>
+                <p>
+                  Tenemos un amplio y elegante local que hará de su evento social un recuerdo
+                  inolvidable. Consulte nuestras ofertas para la organizacion de su compromiso
+                  social
+                </p>
+                <footer>
+                  <form action="GonzalezEmily.html#img14">
+                    <button class="btn-art">Ver más...</button>
+                  </form>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- section 3 -->
+        <section>
+          <h2>Se Parte de Nuestra Familia</h2>
+          <div class="section-form">
+            <form action="./PerezRenan_formulario.html">
+              <button id="btn-form">Iniciar Sesion/Registrarse</button>
+            </form>
+          </div>
+        </section>
       </div>
     </main>
 
     <!-- footer -->
-    <footer>
-      <div class="footer">
-        <p class="rights">
-          Copyright 2021 todos los derechos reservados |
-          <a href="#"> Cambiar Idioma</a>
-        </p>
-        <p class="volver">
-          <a href="#"><img src="assets/images/subir2.png" alt="subir" height="80" width="100" /></a>
-        </p>
-        <div class="contactos">
-          <h3>Comunicate con nosotros:</h3>
-          <p>Cell: <a>(04) xxxxxxxx</a></p>
-          <p>Correo: <a>fernando_leo99@hotmail.com</a></p>
-          <p>Telegram: <a>XXXXXXXXXX</a></p>
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a href="#">
+              <img src="assets/images/icono.jpg" alt="logo" />
+            </a>
+          </figure>
         </div>
-        <div class="clearFloat"></div>
-        <div class="redes">
-          <h3>Visita nuestras redes sociales:</h3>
-          <p class="red">
+        <div class="box">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium.</p>
+        </div>
+        <div class="box">
+          <h2>SIGUENOS</h2>
+          <div class="red-social">
             <a href="https://www.facebook.com"
               ><img src="assets/images/face.png" alt="RF" height="80" width="100"
             /></a>
-          </p>
-          <p class="red">
-            <a href="https://twitter.com/?lang=es"
+            <a href="https://twitter.com"
               ><img src="assets/images/tw.png" alt="RT" height="80" width="100"
             /></a>
-          </p>
-          <p class="red">
-            <a href="https://www.instagram.com/"
+            <a href="https://www.instagram.com"
               ><img src="assets/images/insta.png" alt="RC" height="80" width="100"
             /></a>
-          </p>
-          <div class="clearFloat"></div>
-        </div>
-        <div class="icon">
-          <p class="icono">
-            <img src="assets/images/icono.jpg" alt="Logo" height="200" width="200" />
-          </p>
+          </div>
         </div>
       </div>
+      <div class="grupo-2">
+        <small>&copy; 2022 <b>ABJER</b> - Todos los derechos resservados.</small>
+      </div>
     </footer>
+
+    <!-- Bootstrap JS: Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
