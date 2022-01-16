@@ -9,6 +9,7 @@ function validarDatos(event) {
     var txtNumero = document.getElementById("idCantidadPer");
     var txtFecha = document.getElementById("idFecha");
     var btnRadios = document.getElementsByName("salon");
+    var btnCheks = document.getElementsByName("servicio");
     var letra = /^[a-z ,.'-]+$/i;// letrasyespacio   ///^[A-Z]+$/i;// solo letras
     var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
@@ -74,13 +75,25 @@ function validarDatos(event) {
         if (btnRadios[i].checked) {
             sel = true;
             let res = btnRadios[i].value;
-
             break;
         }
     }
     if (!sel) {
         resultado = false;
-        mensaje("Debe seleccionar un genero", btnRadios[0]);
+        mensaje("Debe seleccionar un salón", btnRadios[0]);
+    }
+    //VALIDAR CHEKS
+    sel = false;
+    for (let i = 0; i < btnCheks.length; i++) {
+        if (btnCheks[i].checked) {
+            cont++;
+            sel = true;
+            break;
+        }
+    }
+    if (!sel) {
+        resultado = false;
+        mensaje("Debe seleccionar al menos un servicio", btnCheks[0]);
     }
 
     //SI ES TRUE-> NORMAL; SI ES FALSE ->DETIENE EVENTO (evento de envio submit)
