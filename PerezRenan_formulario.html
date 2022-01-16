@@ -73,25 +73,42 @@
     <!-- main-->
     <main>
       <div class="container mt-5">
-        <section class="section-article">
-          <h2>Creación de Cuenta</h2>
-          <form>
-            <label>Nombre:</label>
-            <input type="text" /> <br /><br />
-            <label>Apellidos:</label>
-            <input type="text" /> <br /><br />
-            <label>Contraseña: </label>
-            <input type="password" /> <br /><br />
-            <label>Eres mayor de edad: </label>
-            <input type="checkbox" /> <br /><br />
-            <label>Te interesa recivir promociones: </label>
-            <input type="radio" /> <br /><br />
-            <label>Foto de perfil</label>
-            <input type="file" /> <br /><br />
-            <label>botón de envio: </label>
-            <input type="submit" />
-          </form>
-        </section>
+        <h2>Creación de Cuenta</h2>
+
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" for="firstname">Primer Nombre:</label>
+            <input class="form-control" type="text" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="lastname">Apellidos:</label>
+            <input class="form-control" type="text" required />
+          </div>
+          <div class="col-md-8">
+            <label class="form-label" for="emailInfo">E-mail</label>
+            <input class="form-control" type="email" placeholder="ejemplo@coreo.com" required />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label" for="phoneNumber">Número de Teléfono:</label>
+            <input class="form-control" type="text" placeholder="+593 XXX XXX XXXX" />
+          </div>
+          <label class="form-label">Contraseña: </label>
+          <input type="password" /> <br /><br />
+          <div class="col-md-6">
+            <label class="form-label" for="">Año de nacimiento:</label>
+          </div>
+          <label class="form-label">Eres mayor de edad: </label>
+          <input type="checkbox" /> <br /><br />
+          <label class="form-label">Te interesa recivir promociones: </label>
+          <input type="radio" /> <br /><br />
+          <label class="form-label">Foto de perfil</label>
+          <input type="file" /> <br /><br />
+
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+          </div>
+        </form>
+
         <!-- section 3 -->
         <div class="section-form">
           <form action="./index.html">
@@ -147,5 +164,6 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/PerezRenan.js"></script>
   </body>
 </html>
