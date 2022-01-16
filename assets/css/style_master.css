@@ -76,10 +76,6 @@ p {
   line-height: 175%;
 }
 
-main {
-  /* padding-bottom: 3%; */
-}
-
 .gale {
   width: 85%;
   margin: 1% auto;
@@ -244,7 +240,6 @@ ul.show {
 }
 
 /**-----------------------Footer--------------------------**/
-
 div.footer {
   position: relative;
   width: 100%;
@@ -335,4 +330,78 @@ div .redes h3 {
   position: absolute;
   bottom: 50px;
   right: 100px;
+}
+
+/**-----------------------FOOTER 2--------------------------**/
+
+.pie-pagina {
+  width: 100%;
+  height: 19em;
+  background-image: url(../images/fondo1.png);
+  /* background-size: cover; */
+  /* box-sizing: border-box; */
+}
+
+.grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+
+  /* padding: 45px 0px; */
+  padding-bottom: 5px;
+}
+
+.box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box figure img {
+  width: 250px;
+}
+
+.box h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.box p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.grupo-2 {
+  /* padding: 15px 10px; */
+  text-align: center;
+}
+
+.grupo-2 small {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0px;
+    /* padding: 35px 0px; */
+  }
+  .box figure {
+    display: none;
+  }
+  .box p {
+    margin-bottom: 0px;
+  }
+  .red-social img {
+    width: 5rem;
+    height: 4rem;
+  }
 }

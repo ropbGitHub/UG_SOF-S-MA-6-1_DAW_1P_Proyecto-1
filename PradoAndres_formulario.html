@@ -16,10 +16,7 @@
     <!-- Javascript -->
     <script src="assets/js/app.js" defer></script>
     <!-- ICONO MENU -->
-    <script
-      src="https://kit.fontawesome.com/7f7aa7ef65.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/7f7aa7ef65.js" crossorigin="anonymous"></script>
     <!-- browser tab icon-->
     <link rel="icon" href="assets/images/logo.png" />
     <!-- font external reference-->
@@ -49,24 +46,16 @@
               <a href="index.html"><strong class="peso">Inicio</strong></a>
             </li>
             <li>
-              <a href="GonzalezEmily.html"
-                ><strong class="peso">Galería</strong></a
-              >
+              <a href="GonzalezEmily.html"><strong class="peso">Galería</strong></a>
             </li>
             <li class="active">
-              <a href="PradoAndres.html"
-                ><strong class="peso">Servicios</strong></a
-              >
+              <a href="PradoAndres.html"><strong class="peso">Servicios</strong></a>
             </li>
             <li>
-              <a href="MatamorosJoaquin.html"
-                ><strong class="peso">Q&A</strong></a
-              >
+              <a href="MatamorosJoaquin.html"><strong class="peso">Q&A</strong></a>
             </li>
             <li>
-              <a href="AlvearBilly.html"
-                ><strong class="peso">Contacto</strong></a
-              >
+              <a href="AlvearBilly.html"><strong class="peso">Contacto</strong></a>
             </li>
           </ul>
 
@@ -86,128 +75,180 @@
                 <!-- Nombre -->
                 <div class="row">
                   <label> Ingrese su nombre:</label><br />
-                  <input class="texto_formulario_prado" type="text" id="idNombre" name="nombre" placeholder="Nombre" /><br />
+                  <input
+                    class="texto_formulario_prado"
+                    type="text"
+                    id="idNombre"
+                    name="nombre"
+                    placeholder="Nombre"
+                  /><br />
                 </div>
                 <!-- apellido -->
                 <div class="row">
                   <label> Ingrese su apellido:</label><br />
-                  <input class="texto_formulario_prado" type="text" id="idApellido" name="apellido" placeholder="Apellido"
+                  <input
+                    class="texto_formulario_prado"
+                    type="text"
+                    id="idApellido"
+                    name="apellido"
+                    placeholder="Apellido"
                   /><br />
                 </div>
                 <!-- correo electronico -->
                 <div class="row">
                   <label> Ingrese su correo electronico:</label><br />
-                  <input class="texto_formulario_prado" type="email" id="idEmail" name="email" placeholder="example@hotmail.com" /><br />
+                  <input
+                    class="texto_formulario_prado"
+                    type="email"
+                    id="idEmail"
+                    name="email"
+                    placeholder="example@hotmail.com"
+                  /><br />
                 </div>
                 <!-- cantidad de personas -->
                 <div class="row">
-                  <label> Ingrese la cantidad de personas (por cuestiones de la pandemia, se redució el aforo):</label><br />
-                  <input class="texto_formulario_prado" type="number" id="idCantidadPer" name="cantidad_per" placeholder="1" min="1" max="30"/><br />
+                  <label>
+                    Ingrese la cantidad de personas (por cuestiones de la pandemia, se redució el
+                    aforo):</label
+                  ><br />
+                  <input
+                    class="texto_formulario_prado"
+                    type="number"
+                    id="idCantidadPer"
+                    name="cantidad_per"
+                    placeholder="1"
+                    min="1"
+                    max="30"
+                  /><br />
                 </div>
                 <!-- fecha del evento -->
                 <div class="row">
                   <label> Seleccione la fecha del evento:</label><br />
-                  <input class="texto_formulario_prado" type="date" id="idFecha" name="fecha" /><br />
+                  <input
+                    class="texto_formulario_prado"
+                    type="date"
+                    id="idFecha"
+                    name="fecha"
+                  /><br />
                 </div>
                 <!-- tipo de salon -->
                 <div class="row">
-                    <label>Seleccione el tipo de salón para el evento:</label><br />
-                    <input class="form_salon" id="idSalon1" type="radio" name="salon" value="Vic"/>Victoria<br />
-                    <input class="form_salon" id="idSalon2" type="radio" name="salon" value="Vis"/>Vista<br />
-                    <input class="form_salon" id="idSalon3" type="radio" name="salon" value="Pic"/>Picaddily<br />
-                    <input class="form_salon" id="idSalon4" type="radio" name="salon" value="Bris"/>Bristol<br />
+                  <label>Seleccione el tipo de salón para el evento:</label><br />
+                  <input
+                    class="form_salon"
+                    id="idSalon1"
+                    type="radio"
+                    name="salon"
+                    value="Vic"
+                  />Victoria<br />
+                  <input
+                    class="form_salon"
+                    id="idSalon2"
+                    type="radio"
+                    name="salon"
+                    value="Vis"
+                  />Vista<br />
+                  <input
+                    class="form_salon"
+                    id="idSalon3"
+                    type="radio"
+                    name="salon"
+                    value="Pic"
+                  />Picaddily<br />
+                  <input
+                    class="form_salon"
+                    id="idSalon4"
+                    type="radio"
+                    name="salon"
+                    value="Bris"
+                  />Bristol<br />
                 </div>
                 <!-- servicios del evento -->
                 <div class="row">
-                  <div >
-                      <label>Seleccione los servicios para el evento:</label><br />
-                    Decoración <input type="checkbox" name="servicio" value="1" id="idServicio1" class="formItem ser"/><br />
-                    Buffet <input type="checkbox" name="servicio" value="2" id="idServicio2" class="formItem ser"/><br />
-                    Iluminación <input type="checkbox" name="servicio" value="3" id="idServicio3" class="formItem ser"/><br />
-                    Audio y Video <input type="checkbox" name="servicio" value="4" id="idServicio4" class="formItem ser"/><br />
-                  </div>
-              </div>
-              <!-- Boton enviar -->
-              <div class="row">
                   <div>
-                      <input type="submit" class="boton_enviar_prado" value="Enviar">
+                    <label>Seleccione los servicios para el evento:</label><br />
+                    Decoración
+                    <input
+                      type="checkbox"
+                      name="servicio"
+                      value="1"
+                      id="idServicio1"
+                      class="formItem ser"
+                    /><br />
+                    Buffet
+                    <input
+                      type="checkbox"
+                      name="servicio"
+                      value="2"
+                      id="idServicio2"
+                      class="formItem ser"
+                    /><br />
+                    Iluminación
+                    <input
+                      type="checkbox"
+                      name="servicio"
+                      value="3"
+                      id="idServicio3"
+                      class="formItem ser"
+                    /><br />
+                    Audio y Video
+                    <input
+                      type="checkbox"
+                      name="servicio"
+                      value="4"
+                      id="idServicio4"
+                      class="formItem ser"
+                    /><br />
                   </div>
-              </div>
-
+                </div>
+                <!-- Boton enviar -->
+                <div class="row">
+                  <div>
+                    <input type="submit" class="boton_enviar_prado" value="Enviar" />
+                  </div>
+                </div>
               </form>
             </section>
           </div>
         </div>
       </main>
+    </div>
 
-      <!-- footer-->
-      <footer>
-        <!--* copiar y pegar partes que se van a repetir a lo largo de todas las páginas-->
-        <div class="footer">
-          <p class="rights">
-            Copyright 2021 todos los derechos reservados |
-            <a href="#"> Cambiar Idioma</a>
-          </p>
-          <p class="volver">
-            <a href="#"
-              ><img
-                src="assets/images/subir2.png"
-                alt="subir"
-                height="80"
-                width="100"
+    <!-- footer -->
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a href="#">
+              <img src="assets/images/icono.jpg" alt="logo" />
+            </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium.</p>
+        </div>
+        <div class="box">
+          <h2>SIGUENOS</h2>
+          <div class="red-social">
+            <a href="https://www.facebook.com"
+              ><img src="assets/images/face.png" alt="RF" height="80" width="100"
             /></a>
-          </p>
-          <div class="contactos">
-            <h3>Comunicate con nosotros:</h3>
-            <p>Cell: <a>(04) xxxxxxxx</a></p>
-            <p>Correo: <a>fernando_leo99@hotmail.com</a></p>
-            <p>Telegram: <a>XXXXXXXXXX</a></p>
-          </div>
-          <div class="clearFloat"></div>
-          <div class="redes">
-            <h3>Visita nuestras redes sociales:</h3>
-            <p class="red">
-              <a href="https://www.facebook.com"
-                ><img
-                  src="assets/images/face.png"
-                  alt="RF"
-                  height="80"
-                  width="100"
-              /></a>
-            </p>
-            <p class="red">
-              <a href="https://twitter.com/?lang=es"
-                ><img
-                  src="assets/images/tw.png"
-                  alt="RT"
-                  height="80"
-                  width="100"
-              /></a>
-            </p>
-            <p class="red">
-              <a href="https://www.instagram.com/"
-                ><img
-                  src="assets/images/insta.png"
-                  alt="RC"
-                  height="80"
-                  width="100"
-              /></a>
-            </p>
-            <div class="clearFloat"></div>
-          </div>
-          <div class="icon">
-            <p class="icono">
-              <img
-                src="assets/images/icono.jpg"
-                alt="Logo"
-                height="200"
-                width="200"
-              />
-            </p>
+            <a href="https://twitter.com"
+              ><img src="assets/images/tw.png" alt="RT" height="80" width="100"
+            /></a>
+            <a href="https://www.instagram.com"
+              ><img src="assets/images/insta.png" alt="RC" height="80" width="100"
+            /></a>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+      <div class="grupo-2">
+        <small>&copy; 2022 <b>ABJER</b> - Todos los derechos resservados.</small>
+      </div>
+    </footer>
+
     <!-- Enlance externo al JavaScript de Prado -->
     <script src="assets/js/Andres_Prado.js"></script>
   </body>

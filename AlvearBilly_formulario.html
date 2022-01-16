@@ -67,38 +67,61 @@
       </header>
 
       <main class="main_form">
-        <p class="par_formulario">Contáctese con Nosotros</p><br>
+        <p class="par_formulario">Contáctese con Nosotros</p>
+        <br />
         <form class="formulario" id="formulario">
           <!-- Grupo: Cedula -->
           <div class="formulario__grupo" id="grupo__cedula">
             <label for="cedula" class="formulario__label">Cédula *</label>
             <div class="formulario__grupo-input">
-              <input type="text" class="formulario__input" name="cedula" id="cedula" placeholder="0999999992">
+              <input
+                type="text"
+                class="formulario__input"
+                name="cedula"
+                id="cedula"
+                placeholder="0999999992"
+              />
               <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
-            <p class="formulario__input-error">La cédula tiene que ser de 10 dígitos y solo puede contener numeros.</p>
+            <p class="formulario__input-error">
+              La cédula tiene que ser de 10 dígitos y solo puede contener numeros.
+            </p>
           </div>
-    
+
           <!-- Grupo: Nombre -->
           <div class="formulario__grupo" id="grupo__nombre">
             <label for="nombre" class="formulario__label">Nombre *</label>
             <div class="formulario__grupo-input">
-              <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Billy Alvear">
+              <input
+                type="text"
+                class="formulario__input"
+                name="nombre"
+                id="nombre"
+                placeholder="Billy Alvear"
+              />
               <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
-            <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 caracteres y solo puede contener letras.</p>
+            <p class="formulario__input-error">
+              El nombre tiene que ser de 4 a 16 caracteres y solo puede contener letras.
+            </p>
           </div>
-    
+
           <!-- Grupo: Fecha -->
           <div class="formulario__grupo" id="grupo__fecha">
             <label for="fecha" class="formulario__label">Fecha</label>
             <div class="formulario__grupo-input">
-              <input type="date" class="formulario__input" name="fecha" id="fecha" onkeydown="return false">
+              <input
+                type="date"
+                class="formulario__input"
+                name="fecha"
+                id="fecha"
+                onkeydown="return false"
+              />
               <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
             <p class="formulario__input-error">Elija una fecha para contactarlo.</p>
           </div>
-    
+
           <!-- Grupo: Motivo -->
           <div class="formulario__grupo" id="grupo__motivo">
             <label for="motivo" class="formulario__label">Motivo</label>
@@ -113,92 +136,100 @@
             </div>
             <p class="formulario__input-error">Elija un motivo de contacto.</p>
           </div>
-    
+
           <!-- Grupo: Correo Electronico -->
           <div class="formulario__grupo" id="grupo__correo">
             <label for="correo" class="formulario__label">Correo Electrónico *</label>
             <div class="formulario__grupo-input">
-              <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+              <input
+                type="email"
+                class="formulario__input"
+                name="correo"
+                id="correo"
+                placeholder="correo@correo.com"
+              />
               <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
-            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+            <p class="formulario__input-error">
+              El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.
+            </p>
           </div>
-    
+
           <!-- Grupo: Teléfono -->
           <div class="formulario__grupo" id="grupo__telefono">
             <label for="telefono" class="formulario__label">Teléfono *</label>
             <div class="formulario__grupo-input">
-              <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+              <input
+                type="text"
+                class="formulario__input"
+                name="telefono"
+                id="telefono"
+                placeholder="4491234567"
+              />
               <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
-            <p class="formulario__input-error">El teléfono tiene que ser de 10 dígitos y solo puede contener numeros.</p>
+            <p class="formulario__input-error">
+              El teléfono tiene que ser de 10 dígitos y solo puede contener numeros.
+            </p>
           </div>
-    
+
           <!-- Grupo: Terminos y Condiciones -->
           <div class="formulario__grupo" id="grupo__terminos">
             <label class="formulario__label">
-              <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+              <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" />
               Acepto los Terminos y Condiciones *
             </label>
           </div>
-    
+
           <div class="formulario__mensaje" id="formulario__mensaje">
-            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+            <p>
+              <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el
+              formulario correctamente.
+            </p>
           </div>
-    
+
           <div class="formulario__grupo formulario__grupo-btn-enviar">
             <button type="submit" class="formulario__btn">Enviar</button>
-            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+              Formulario enviado exitosamente!
+            </p>
           </div>
         </form>
       </main>
-
-      <!-- footer-->
-      <footer>
-        <!--* copiar y pegar partes que se van a repetir a lo largo de todas las páginas-->
-        <div class="footer">
-          <p class="rights">
-            Copyright 2021 todos los derechos reservados |
-            <a href="#"> Cambiar Idioma</a>
-          </p>
-          <p class="volver">
-            <a href="#"
-              ><img src="assets/images/subir2.png" alt="subir" height="80" width="100"
+    </div>
+    <!-- footer -->
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a href="#">
+              <img src="assets/images/icono.jpg" alt="logo" />
+            </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, praesentium.</p>
+        </div>
+        <div class="box">
+          <h2>SIGUENOS</h2>
+          <div class="red-social">
+            <a href="https://www.facebook.com"
+              ><img src="assets/images/face.png" alt="RF" height="80" width="100"
             /></a>
-          </p>
-          <div class="contactos">
-            <h3>Comunicate con nosotros:</h3>
-            <p>Cell: <a>(04) xxxxxxxx</a></p>
-            <p>Correo: <a>fernando_leo99@hotmail.com</a></p>
-            <p>Telegram: <a>XXXXXXXXXX</a></p>
-          </div>
-          <div class="clearFloat"></div>
-          <div class="redes">
-            <h3>Visita nuestras redes sociales:</h3>
-            <p class="red">
-              <a href="https://www.facebook.com"
-                ><img src="assets/images/face.png" alt="RF" height="80" width="100"
-              /></a>
-            </p>
-            <p class="red">
-              <a href="https://twitter.com/?lang=es"
-                ><img src="assets/images/tw.png" alt="RT" height="80" width="100"
-              /></a>
-            </p>
-            <p class="red">
-              <a href="https://www.instagram.com/"
-                ><img src="assets/images/insta.png" alt="RC" height="80" width="100"
-              /></a>
-            </p>
-            <div class="clearFloat"></div>
-          </div>
-          <div class="icon">
-            <p class="icono">
-              <img src="assets/images/icono.jpg" alt="Logo" height="200" width="200" />
-            </p>
+            <a href="https://twitter.com"
+              ><img src="assets/images/tw.png" alt="RT" height="80" width="100"
+            /></a>
+            <a href="https://www.instagram.com"
+              ><img src="assets/images/insta.png" alt="RC" height="80" width="100"
+            /></a>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+      <div class="grupo-2">
+        <small>&copy; 2022 <b>ABJER</b> - Todos los derechos resservados.</small>
+      </div>
+    </footer>
   </body>
 </html>
