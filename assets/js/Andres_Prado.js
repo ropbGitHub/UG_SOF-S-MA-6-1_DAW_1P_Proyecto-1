@@ -1,6 +1,5 @@
 var form = document.querySelector("#formulario_cotizacion");
 form.addEventListener('submit', validarDatos);
-let cont = 0;
 
 function validarDatos(event) {
     var resultado = true;
@@ -10,45 +9,24 @@ function validarDatos(event) {
     var txtNumero = document.getElementById("idCantidadPer");
     var txtFecha = document.getElementById("idFecha");
     var btnRadios = document.getElementsByName("salon");
+    var btnCheks = document.getElementsByName("servicio");
     var letra = /^[a-z ,.'-]+$/i;// letrasyespacio   ///^[A-Z]+$/i;// solo letras
     var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
     limpiarMensajes();
 
-    validarNombre(txtNombre, resultado, letra, mensaje);
-    validarApellido(txtApellido, resultado, letra, mensaje);
-    validarCorreoElectronico(txtemail, resultado, correo, mensaje);
-    validarNumero(txtNumero, resultado, mensaje);
-    validarFecha(txtFecha, resultado, mensaje);
-    validarRadio(btnRadios, resultado, mensaje);
-
-    validacionDeCampos();
-}
-
-function validacionDeCampos() {
-
-    if (!validarNombre.resultado || !validarApellido.resultado || !validarCorreoElectronico.resultado || !validarNumero.resultado
-        || !validarFecha.resultado || !validarRadio.resultado) {
-        event.preventDefault();  // detener el evento  //stop form from submitting
-    }
-}
-
-function validarNombre(txtNombre, resultado, letra) {
-
+    //VALIDAR NOMBRES
     if (txtNombre.value === '') {
         resultado = false;
-        mensaje("Nombre es requerido", txtNombre, mensaje);
-    } else if (!letra.test(txtNombre.value)) { //letra.test(txtNombres.value)
+        mensaje("Nombre es requerido", txtNombre);
+    } else if (!letra.test(txtNombre.value)) { //letra.test(txtNombre.value)
         resultado = false;
         mensaje("Nombre solo debe contener letras", txtNombre);
     } else if (txtNombre.value.length > 20) {
         resultado = false;
         mensaje("Nombre maximo 20 caracteres", txtNombre);
     }
-}
-
-function validarApellido(txtApellido, resultado, letra) {
-
+    //VALIDAR APELLIDOS
     if (txtApellido.value === '') {
         resultado = false;
         mensaje("Apellido es requerido", txtApellido, mensaje);
@@ -59,9 +37,8 @@ function validarApellido(txtApellido, resultado, letra) {
         resultado = false;
         mensaje("Apellido maximo 20 caracteres", txtApellido);
     }
-}
 
-function validarCorreoElectronico(txtemail, resultado, correo) {
+    //VALIDAR CORREO ELECTRONICO
     if (txtemail.value === "") {
         resultado = false;
         mensaje("Email es requerido", txtemail);
@@ -69,22 +46,18 @@ function validarCorreoElectronico(txtemail, resultado, correo) {
         resultado = false;
         mensaje("Email no es correcto", txtemail);
     }
-}
-
-function validarNumero(txtNumero, resultado) {
+    //VALIDAR NUMERO
     if (txtNumero.value === '') {
         resultado = false;
         mensaje("Numero es requerido", txtNumero, mensaje);
     }
-}
-function validarFecha(txtFecha, resultado) {
-    // validacion de fecha
+    //VALIDAR FECHA
     var dato = txtFecha.value;
 
     var fechaI = new Date(dato);
     var anioI = fechaI.getFullYear();
 
-    var fechaActual = new Date();// fecha actual
+    var fechaActual = new Date();
     var anioA = fechaActual.getFullYear();
 
     if (fechaI < fechaActual) {
@@ -94,22 +67,36 @@ function validarFecha(txtFecha, resultado) {
         resultado = false;
         mensaje("Debe ser del año actual", txtFecha);
     }
-
-}
-
-function validarRadio(btnRadios, resultado) {
+    //VALIDAR RADIOS
     var sel = false;
     for (let i = 0; i < btnRadios.length; i++) {
         if (btnRadios[i].checked) {
             sel = true;
             let res = btnRadios[i].value;
-
             break;
         }
     }
     if (!sel) {
         resultado = false;
-        mensaje("Debe seleccionar un genero", btnRadios[0]);
+        mensaje("Debe seleccionar un salón", btnRadios[0]);
+    }
+    //VALIDAR CHEKS
+    for (let i = 0; i < btnCheks.length; i++) {
+        if (btnCheks[i].checked) {
+            sel = true;
+            break;
+        }
+    }
+    if (!sel) {
+        resultado = false;
+        mensaje("Debe seleccionar al menos un servicio", btnCheks[0]);
+    }
+
+    //SI ES TRUE-> NORMAL; SI ES FALSE ->DETIENE EVENTO (evento de envio submit)
+    if (!resultado) {
+        event.preventDefault();
+    } else {
+        alert("Gracias por llenar el formulario :D");
     }
 }
 
@@ -118,8 +105,6 @@ function mensaje(cadenaMensaje, elemento) {
     var nodoPadre = elemento.parentNode;
     var nodoMensaje = document.createElement("span");
     nodoMensaje.textContent = cadenaMensaje;
-    //nodoMensaje.style.color = "red";
-    //nodoMensaje.display = "block";
     nodoMensaje.setAttribute("class", "mensajeError");
     nodoPadre.appendChild(nodoMensaje);
 
