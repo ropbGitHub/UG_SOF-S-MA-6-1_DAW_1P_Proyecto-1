@@ -17,13 +17,13 @@ function validarDatos(event) {
 
     //VALIDAR NOMBRES
     if (txtNombre.value === '') {
-        resultadoNombre = false;
+        resultado = false;
         mensaje("Nombre es requerido", txtNombre);
     } else if (!letra.test(txtNombre.value)) { //letra.test(txtNombre.value)
-        resultadoNombre = false;
+        resultado = false;
         mensaje("Nombre solo debe contener letras", txtNombre);
     } else if (txtNombre.value.length > 20) {
-        resultadoNombre = false;
+        resultado = false;
         mensaje("Nombre maximo 20 caracteres", txtNombre);
     }
     //VALIDAR APELLIDOS
@@ -47,13 +47,11 @@ function validarDatos(event) {
         mensaje("Email no es correcto", txtemail);
     }
     //VALIDAR NUMERO
-    var resultado = true;
     if (txtNumero.value === '') {
         resultado = false;
         mensaje("Numero es requerido", txtNumero, mensaje);
     }
     //VALIDAR FECHA
-    var resultado = true;
     var dato = txtFecha.value;
 
     var fechaI = new Date(dato);
@@ -83,10 +81,8 @@ function validarDatos(event) {
         mensaje("Debe seleccionar un salón", btnRadios[0]);
     }
     //VALIDAR CHEKS
-    sel = false;
     for (let i = 0; i < btnCheks.length; i++) {
         if (btnCheks[i].checked) {
-            cont++;
             sel = true;
             break;
         }
