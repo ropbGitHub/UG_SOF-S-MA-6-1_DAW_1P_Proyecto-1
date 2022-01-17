@@ -2,6 +2,12 @@
 
 /**-----------------------Global--------------------------**/
 
+* {
+  /* margin: 0; */
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+
 :root {
   --fs-xl: 5rem;
   --fs-l: 3rem;
@@ -20,9 +26,6 @@
     --fs-500: 1rem;
     --fs-400: 0.75rem;
   }
-  h2 {
-    color: red;
-  }
 }
 
 @media (max-width: 60em) {
@@ -32,9 +35,6 @@
     --fs-600: 1.25rem;
     --fs-500: 1rem;
     --fs-400: 0.75rem;
-  }
-  h2 {
-    color: green;
   }
 }
 
@@ -48,12 +48,19 @@
   #success {
     display: none;
   }
-  h2 {
-    color: red;
-  }
 }
 
 @media (sm) {
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
 }
 
 /**-----------------------Section-Banner--------------------------**/
@@ -117,14 +124,16 @@ button::after {
   z-index: -1;
 }
 
-#btn-form {
+#btn-form,
+.btn-form {
   font-size: var(--fs-500);
   display: block;
   border-radius: 5px;
   background-color: #f7e0e0;
 }
 
-#btn-form:hover {
+#btn-form:hover,
+.btn-form:hover {
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.6);
   top: -5px;
   left: -5px;
@@ -219,3 +228,96 @@ button::after {
 }
 
 /**-----------------------form--------------------------**/
+
+.container {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, */
+  /* "Open Sans", "Helvetica Neue", sans-serif; */
+  /* background: #3dc7be; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* min-height: 90vh; */
+}
+
+.contenedor {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 19px 20px 8px -9px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 400rem;
+  max-width: 100%;
+}
+.cabecera {
+  /* background: #13334c; */
+  /* color: azure; */
+  /* text-align: center; */
+  /* border-bottom: 1px solid #f0f0f0; */
+  /* padding: 20px 40px; */
+}
+
+#formulario {
+  /* padding: 30px 20px; */
+}
+
+.form-control {
+  /* margin-bottom: 7px; */
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  /* display: inline-block; */
+  margin-bottom: 7px;
+  /* font: weight 200px; */
+}
+
+.form-control input,
+.form-control select {
+  border: none;
+  background-color: #f0f0f0;
+  /* display: block; */
+  /* font-family: inherit; */
+  /* font-size: 16px; */
+  padding: 12px;
+  width: 100%;
+}
+.form-control,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.form-control.ok input,
+.form-control.ok select {
+  border: 0.1px solid;
+  border-color: #08ffc8;
+}
+
+.form-control.falla input,
+.form-control.ok select {
+  border: 0.1px solid;
+  border-color: #fe5f55;
+}
+
+#formulario button {
+  /* background: #fd4f00; */
+  /* border: 1px solid #fd5f00; */
+  /* border-radius: 2px; */
+  /* color: #f6f6e9; */
+  /* display: block; */
+  /* width: 100%; */
+  /* padding: 10px; */
+  /* font-size: 18px; */
+}
+.form-control p {
+  visibility: hidden;
+  position: absolute;
+  font-size: small;
+  /* font-weight: 500; */
+  text-align: right;
+}
+
+.form-control.falla p {
+  visibility: visible;
+  color: #e74c3c;
+}

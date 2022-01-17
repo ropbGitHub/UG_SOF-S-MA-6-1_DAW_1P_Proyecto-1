@@ -73,99 +73,69 @@
     <!-- main-->
     <main>
       <div class="container mt-5">
-        <h2>Creación de Cuenta</h2>
+        <div class="cabecera">
+          <h2>Registro de Usuario</h2>
+        </div>
 
-        <!-- Priemr Nombre -->
-        <form class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label" for="firstName">Primer Nombre:</label>
-            <input class="form-control" type="text" id="firstName" required />
-          </div>
-
-          <!-- Apellidos -->
-          <div class="col-md-6">
-            <label class="form-label" for="lastName">Apellidos:</label>
-            <input class="form-control" type="text" id="lastName" required />
+        <form class="row g-3" id="formulario">
+          <!-- Nombre de usuario -->
+          <div class="form-control col-md-6">
+            <label for="usuario">Nombre de usuario</label>
+            <input id="usuario" type="text" />
+            <p></p>
           </div>
 
           <!-- E-mail -->
-          <div class="col-md-8">
-            <label class="form-label" for="emailInfo">E-mail</label>
-            <input
-              class="form-control"
-              type="email"
-              id="emailInfo"
-              placeholder="algo@algo.com"
-              required
-            />
-          </div>
-
-          <!-- Telefono -->
-          <div class="col-md-4">
-            <label class="form-label" for="phoneNumber">Número de Teléfono:</label>
-            <input
-              class="form-control"
-              type="text"
-              id="phoneNumber"
-              placeholder="+593 XXX XXX XXXX"
-            />
-          </div>
-
-          <!-- Contraseña 1 -->
-          <div class="col-md-6">
-            <label class="form-label" for="inputPassword2">Contraseña:</label>
-            <input
-              class="for-control"
-              type="password"
-              id="inputPassword2"
-              placeholder="********"
-              required
-            />
-          </div>
-
-          <!-- Año Nacimiento -->
-          <div class="col-md-6">
-            <label class="form-label" for="">Año de nacimiento:</label>
-          </div>
-
-          <label class="form-label">Eres mayor de edad: </label>
-          <input type="checkbox" />
-          <label class="form-label">Te interesa recivir promociones: </label>
-          <input type="radio" />
-          <label class="form-label">Foto de perfil</label>
-          <input type="file" />
-
-          <div class="col-md-12">
-            <button type="submit" class="btn btn-primary">Registrarse</button>
-          </div>
-        </form>
-
-        <!-- section 3 -->
-        <div class="section-form">
-          <form action="./index.html">
-            <button id="btn-form">Canceler/Regresar</button>
-          </form>
-        </div>
-      </div>
-
-      <!--  -->
-      <div class="container mt-5">
-        <form class="row g-3" action="/">
-          <h1>Registrarion</h1>
-
-          <div class="input-control col-md-6">
-            <label for="username">Username</label>
-            <input id="username" name="Username" type="text" />
-            <div class="error"></div>
-          </div>
-
-          <div class="input-control col-md-6">
+          <div class="form-control">
             <label for="email">E-mail</label>
-            <input id="email" name="username" type="text" />
+            <input id="email" type="email" />
+            <p></p>
+          </div>
+
+          <!-- Fecha Nacimiento -->
+          <div class="form-control">
+            <label for="date">Fecha de nacimiento</label>
+            <input id="date" type="date" />
+            <p></p>
+          </div>
+
+          <!-- Nacionalidad -->
+          <div class="form-control">
+            <label for="country">Nacionalidad (opcional)</label>
+            <!-- <input id="date" type="date" /> -->
+            <select name="country" id="country">
+              <option value="0">N/A</option>
+              <option value="1">Ecuador</option>
+              <option value="2">Perú</option>
+              <option value="3">Venezuela</option>
+              <option value="4">Chile</option>
+            </select>
+            <p></p>
+          </div>
+
+          <!-- Password -->
+          <div class="form-control">
+            <label for="pass">Password</label>
+            <input id="pass" type="password" />
+            <p></p>
+          </div>
+
+          <!-- Confirmar Password -->
+          <div class="form-control">
+            <label for="passConfirma">Confirmar Password</label>
+            <input id="passConfirma" type="password" />
+            <p></p>
+          </div>
+
+          <div class="btn">
+            <button class="btn-form">Enviar</button>
           </div>
         </form>
+
+        <form action="./index.html">
+          <button id="btn-form">Canceler/Regresar</button>
+        </form>
       </div>
-      <!--  -->
     </main>
 
     <!-- footer -->
