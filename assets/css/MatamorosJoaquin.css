@@ -1,1 +1,63 @@
 /*!-----------------------Joaquín-------------------------!*/
+/*---------------------------BOTON-------------------------*/
+.boton {
+    /* display: inline-block; */
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 60px;
+    background: #141414;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton span {
+    font-weight: 700;
+    transition: .4s ease-in-out all;
+    position: absolute;
+    left: 35%;
+    top: 35%;
+}
+
+.boton .icono_btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    left: -40px;
+    transition: .3s ease-in-out all;
+    opacity: 0;
+    top: 40%;
+}
+
+.boton i {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+}
+
+.boton:hover {
+    background: #0066ff;
+}
+
+.boton:hover .icono_btn {
+    left: 87.5%;
+    opacity: 1;
+}
+
+.boton:hover span {
+    left: 20px;
+}
+
+.boton:active {
+    width: 375px;
+    height: 50px;
+    transition: .4s ease-in-out all;
+}
