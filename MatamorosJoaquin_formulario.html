@@ -10,6 +10,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="assets/css/style_master.css" />
+    <link rel="stylesheet" href="assets/css/MatamorosJoaquin.css" />
     <style>
       * {
         font-family: Arial;
@@ -31,20 +32,6 @@
         color: black;
         text-decoration: underline;
       }
-      #boton {
-        background-color: #ddd;
-        padding: 3px;
-        margin-bottom: 30px;
-        border-radius: 10px;
-        font-size: 20px;
-      }
-      #boton2 {
-        background-color: #ddd;
-        padding: 3px;
-        margin-bottom: 30px;
-        border-radius: 10px;
-        font-size: 20px;
-      }
       .Co {
         padding: 5px 40px;
         border-bottom: 1px solid #fff;
@@ -57,94 +44,98 @@
         padding: 5px 40px;
         border-radius: 10px;
       }
+      #suqueja h5{
+                display: inline;
+                background: #ff99ff;
+                margin:4px;
+                padding: 2px;
+            }
     </style>
   </head>
   <body>
-    <form>
-      <br />
-      <div class="container">
-        <div class="row" style="border-bottom: 3px solid #fff; padding: 2px">
-          <h1 class="elemento col-md-4" style="font-size: 50px">Preguntanos</h1>
-        </div>
-        <div class="row">
-          <section class="Cuadro">
-            <h5 style="color: #666666">Ingrese sus datos:</h5>
-            <input
-              type="text"
-              name="Nombres"
-              id="nombres"
-              placeholder="Ingrese su Nombre"
-              class="elemento col-md-5"
-            />
-            <input
-              type="text"
-              name="Apellidos"
-              id="apellidos"
-              placeholder="Ingrese su Apellido"
-              class="elemento col-md-5"
-            />
-          </section>
-        </div>
-        <div class="row">
-          <section class="Co">
-            <h5 style="color: #666666">Seleccione la categoría de su pregunta:</h5>
-            <select class="elemento col-md-2">
-              <option selected>Seleccione</option>
-              <option>Binaria</option>
-              <option>Categórica</option>
-              <option>Informativa</option>
-            </select>
-          </section>
-        </div>
-        <div class="row">
-          <section class="Co">
-            <h5 style="color: #666666; padding: 5px 0px">Seleccione una etiqueta:</h5>
-            <section class="elemento col-md-4">
-              <h5 style="color: #666666">Tipo Pregunta</h5>
-              <input type="radio" name="bebida" value="agua" />Espacio<br />
-              <input type="radio" name="bebida" value="cerveza" />Precio<br />
-              <input type="radio" name="bebida" value="vino" />Otros<br />
-            </section>
-          </section>
-        </div>
-        <div class="row">
-          <section class="Co">
-            <h5 style="color: #666666">Ingrese su pregunta:</h5>
-            <textarea class="elemento col-md-10" name="Tx1" rows="6" cols="64">
-Area de texto</textarea
-            >
-          </section>
-        </div>
-        <div class="row">
-          <section class="Co">
-            <h5 style="color: #666666">Sugerencias/Quejas</h5>
-            <textarea class="elemento col-md-10" name="Tx2" rows="6" cols="64">
-Ayúdanos a mejorar</textarea
-            >
-          </section>
-        </div>
-        <div class="row">
-          <div id="TC" class="elemento col-md-7">
-            <input type="checkbox" name="bebida" value="agua" />Estoy de acuerdo con
-            <a href="#">Terminos y Condiciones</a>
+    <div class="formularios">
+      <form id="formContacto">
+          <br>
+          <div class="container">
+              <div class="row" style=" border-bottom: 3px solid #fff; padding: 2px;">
+                  <h1 class="elemento col-md-4" style="font-size: 50px;">Preguntanos</h1>
+              </div>
+              <div class="row">
+                  <section class="Cuadro">
+                      <h5 style="color: #666666">Ingrese sus datos:</h5>
+                      <input type="text" name="Nombres" id="nombres" placeholder="Ingrese su Nombre" class="elemento col-md-5"><br>
+                      <br><input type="text" name="Apellidos" id="apellidos" placeholder="Ingrese su Apellido" class="elemento col-md-5">
+                  </section>
+              </div>
+              <div class="row">
+                  <section class="Co">
+                      <h5 style="color: #666666">Seleccione la categoría de su pregunta:</h5>
+                      <select class="elemento col-md-2" id='seleccion'>
+                          <option value="0">Seleccione</option>
+                          <option value="1">Binaria</option>
+                          <option value="2">Categórica</option>
+                          <option value="2">Informativa</option>
+                      </select>
+                  </section>
+              </div>
+              <div class="row">
+                  <section class="Co">
+                      <h5 style="color: #666666; padding: 5px 0px;">Seleccione una etiqueta:</h5>
+                      <section class="elemento col-md-4">
+                          <h5 style="color: #666666">Tipo Pregunta</h5>
+                          <input type=radio name=tipo value=e>Espacio<br>
+                          <input type=radio name=tipo value=p>Precio<br>
+                          <input type=radio name=tipo value=o>Otros<br>
+                      </section>
+                  </section>
+              </div>
+              <div class="row">
+                 <section class="Co">
+                     <h5 style="color: #666666">Ingrese su pregunta:</h5>
+                     <textarea class="elemento col-md-10" name="Tx" rows=6 cols=64>Area de texto</textarea>
+                 </section>
+              </div>
+              <div class="row">
+                  <section class="Co" id="suqueja">
+                      <h5 style="color: #666666">Sugerencias/Quejas</h5>
+                      <textarea class="elemento col-md-10" name="Tx" rows=6 cols=64>Ayúdanos a mejorar</textarea>
+                 </section>
+              </div>
+              <div class="row">
+                  <div id="TC" class="elemento col-md-7">
+                      <input type=checkbox id='check' name=checkBox value=Kyc>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a>
+                  </div>
+              </div>
+          </div>  
+          <br>
+          <div class="row">
+              <div class="col text-center" >
+                  <div class="elemento col-md-2" style="display: inline">
+                      <input type="submit" class="boton" value="Enviar">
+                      <input type="reset" class="boton" value="Cancelar">
+                      <input type="button" class="boton" value="Regresar" onclick="location.href='MatamorosJoaquin.html'">
+                  </div>
+              </div>
           </div>
-        </div>
+      </form>
       </div>
-    </form>
-    <br />
-    <div class="row">
-      <div class="col text-center">
-        <button id="boton" onclick="location.href='#'" class="elemento col-md-2">Aceptar</button>
-        <button
-          id="boton2"
-          onclick="location.href='MatamorosJoaquin.html'"
-          class="elemento col-md-2"
-        >
-          Regresar
-        </button>
-      </div>
+      <br>
     </div>
+    <script type="text/javascript" src="js/color.js"> </script>
+    <script type="text/javascript">
+            // obtener elemento y registrar su evento
+            const titulo = document.querySelector('#suqueja h5');
+            titulo.addEventListener('click', function (e) {
+                let textarea = e.target.parentNode.children[1];
 
+                if (textarea.style.display !== 'none') {
+                    textarea.style.display = 'none';
+                } else {
+                    textarea.style.display = 'block';
+               }
+            });
+
+        </script>
     <!-- footer -->
     <footer class="pie-pagina">
       <div class="grupo-1">

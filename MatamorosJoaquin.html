@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS Style -->
     <link rel="stylesheet" href="assets/css/style_master.css" />
+    <link rel="stylesheet" href="assets/css/MatamorosJoaquin.css"/>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
@@ -61,13 +62,14 @@
       .preguntas:hover {
         background: #aed3f7;
       }
-
-      #boton {
-        background-color: #ddd;
-        padding: 13px;
-        margin-bottom: 30px;
-        border-radius: 10px;
-        font-size: 20px;
+      ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
       }
     </style>
   </head>
@@ -106,9 +108,9 @@
         </span>
       </nav>
     </header>
-
+    <br>
     <div class="main">
-      <div class="container">
+      <div class="container" id="cont">
         <div class="row">
           <div class="elemento col-md-12">
             <article class="preguntas">
@@ -186,16 +188,30 @@
     <br />
     <div class="row">
       <div class="col text-center">
-        <button
-          id="boton"
-          onclick="location.href='MatamorosJoaquin_formulario.html'"
-          class="elemento col-md-2"
-        >
-          Preguntanos
-        </button>
+        <form action="MatamorosJoaquin_formulario.html">
+          <button class="boton">
+                  <span class="icono_btn">
+                          <i class="fas fa-arrow-right"></i>
+                  </span>
+                  <span>Formulario</span>
+          </button>
+      </form>
+      <br>
+      <button class="boton" onclick="cambiarS('#191919', 'white', '#252850')">
+                  <span class="icono_btn">
+                          <i class="fas fa-arrow-right"></i>
+                  </span>
+                  <span>Fondo O</span>
+      </button>
+      <button class="boton" onclick="cambiarC('#f7e0e0', 'black', '#fff')">
+                  <span class="icono_btn">
+                          <i class="fas fa-arrow-right"></i>
+                  </span>
+                  <span>Fondo C</span>
+      </button>
       </div>
     </div>
-
+  </br>
     <!-- footer -->
     <footer class="pie-pagina">
       <div class="grupo-1">
@@ -230,5 +246,27 @@
         <small>&copy; 2022 <b>ABJER</b> - Todos los derechos resservados.</small>
       </div>
     </footer>
+    <script type="text/javascript">
+      /*---------------------------BOTON "MODO OSCURO-CLARO"-------------------------*/
+      function cambiarS(back, color, fon){
+          console.log(back, color);
+          // obtener elementos
+          let conts = document.getElementById("cont");
+          let bod = document.getElementById("body");
+          conts.style.backgroundColor = back;
+          conts.style.color = color;
+          bod.style.backgroundColor = fon;
+      }
+      function cambiarC(back, color, fon){
+          console.log(back, color);
+          // obtener elementos
+          let conts = document.getElementById("cont");
+          let bod = document.getElementById("body");
+          conts.style.backgroundColor = back;
+          conts.style.color = color;
+          bod.style.backgroundColor = fon;
+      }
+</script>
+<br>
   </body>
 </html>
