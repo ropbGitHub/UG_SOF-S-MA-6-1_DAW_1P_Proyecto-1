@@ -202,6 +202,10 @@ tbody tr:nth-child(even) {
   background-color: rgba(252, 213, 243, 0.329);
 }
 
+
+/*!----------FORMULRIO-----!*/
+
+
 #EGMBoton{
   background: linear-gradient(to bottom, rgba(255, 223, 117, 0.39), rgba(240, 121, 52, 0.411)), url(../images/fondo.png);
   margin: 2%;
@@ -217,118 +221,6 @@ tbody tr:nth-child(even) {
  }
 
 
-
-
-.formularioE2GM {
-    width: 85%;
-    margin: 1% auto;   
-    
-  }
-
-  .formsEGM{
-      
-    width: 90%;
-    margin: auto;
-    list-style: none;
-    padding: 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: wrap;
-    
-    justify-content: center;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.459);
-    border: 5px inset rgba(238, 169, 221, 0.575);
-  
-  }
-  #formsEGM1, #formsEGM2{
- 
-      padding:  10px;
-      margin: 5px;
-     
-      background: hsla(0, 86%, 57%, 0.062);
-      border-radius: 10px;
-      flex-basis: 400px;
-      
-
-      
-
-  }
-
-  #formsEGM1 fieldset, #formsEGM2 fieldset{
-        border:   3px solid rgba(0, 0, 0, 0.521);
-        color: #000;
-        background-color: rgba(171, 238, 243, 0.795);
-        border-radius: 20px;
-        padding: 2%;
-        
-  }
-  #formsEGM2 #descripcion{
-    color: gray;
-    font-style: italic;
-    font-size: 10px;
-    
-}
-  #formsEGM1 legend, #formsEGM2 legend{
-    text-shadow: #7b7786;
-    font-size: 20px;
-    text-align: center;
-    padding: 5px;
-    
-}
- #fecha, #name,#lastname, #dni, #email, #numCel, #cdp, #tarjeta,#nt, #s{
-    border-radius: 5px;
-    font-size: 14px;
-    width: 60%;
-}
-
-.label{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-style: bold;
-  font-size: 15px;
-
-}
-
- 
-.btnEnviar{
-    width: 90%;
-    margin: auto;
-    
-    padding: 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    
-    justify-content: center;
-   
-}
-  
-  .fe{
-    width: 20px;
-    border-radius: 5px;
-  }
-
-  #btnEnviar{
-    color: #FFF;
-    
-      padding: 5px;
-      font-size: 20px;
-      border-radius: 5px;
-      background: mediumblue;
-     
-      
-  }
-  .btReset{
-      margin: 5px;
-    padding: 5px;
-    font-size: 10px;
-    border-radius: 5px;
-    border: rgba(255, 255, 255, 0);
-    border-bottom: 3px solid #000;
-    background: rgb(91, 255, 192);
-   align-items: center;
-  }
   .Error{
     margin: 15px;
     
@@ -344,3 +236,227 @@ tbody tr:nth-child(even) {
     border-radius: 15px;
     color: rgb(0, 0, 0);
   }
+
+  *{
+    margin: 0%;
+    padding: 0;
+    outline: none;
+    font-family: sans-serif;
+
+}
+
+
+
+
+.contenedor h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+.contenedor .Princi_form_e2gm{
+    width: 100%;
+    overflow: hidden;
+
+}
+.Princi_form_e2gm  form{
+    display: flex;
+    width: 400%;
+}
+
+.Princi_form_e2gm form .paginaF{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.Princi_form_e2gm form .paginaF .titulo{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 50px;
+}
+
+.Princi_form_e2gm form .paginaF .datos{
+    height: 35px;
+    width: 95%;
+    margin: 40px 0;
+    display: flex;
+    position: relative;
+}
+
+.Princi_form_e2gm form .paginaF .datos label{
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
+    float: left;
+    text-align: left;
+    width: 100%;
+}
+
+.Princi_form_e2gm form .paginaF .datos input{
+
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.Princi_form_e2gm form .paginaF .datos select{
+
+    width: 100%;
+    padding: 1px;
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.Princi_form_e2gm form .paginaF .datos button{
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background: rgb(0, 0, 0) ;
+    border-radius: 7px ;
+    color: floralwhite;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:  0.3 ease;
+
+}
+.Princi_form_e2gm form .paginaF .datos button:hover{
+    background: rgb(255, 188, 125);
+    color: #000;
+}
+
+.Princi_form_e2gm form .paginaF .btn button{
+    margin-top: -20px!important;
+}
+form .paginaF .btn button.volver{
+    margin-right: 3px;
+    font-size: 17px;
+}
+form .paginaF .btn button.adelante{
+    margin-left: 3px;
+    font-size: 17px;
+}
+
+/*comienza los*/
+
+.contenedor .progres_bar{
+    display: flex;
+    margin: 40px 0;
+}
+.contenedor .progres_bar .pasos{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.progres_bar .pasos p{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin-bottom: 8px;
+}
+.progres_bar .pasos p.active{
+    color: #00ffff;
+}
+.progres_bar .pasos .numPB{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.progres_bar .pasos .numPB.active{
+    border-color: #00edee ;
+    background: #00edee;
+}
+
+.progres_bar .pasos .numPB span{
+
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.progres_bar .pasos .numPB.active span{
+    display: none;
+}
+
+.progres_bar .pasos .check{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
+}
+.progres_bar .pasos .check.active{
+    display: block;
+    color: rgb(255, 255, 255);
+}
+.progres_bar .pasos .numPB:before,
+.progres_bar .pasos .numPB:after{
+    position: absolute;
+    content: '';
+    width: 44px;
+    height: 3px;
+    bottom: 11px;
+    right: -53px;
+    background: #000;
+}
+
+.progres_bar .pasos:last-child .numPB:before,
+.progres_bar .pasos:last-child .numPB:after{
+    display: none;
+}
+.progres_bar .pasos .numPB.active:after{
+    background: #00edee;
+    animation: mov 0.3s linear forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes mov{
+    100%{
+        transform: scaleX(1);
+
+    }
+}
+
+/* password */
+
+.ojopass{
+    position: absolute;
+    top: 29%;
+    right: 7px;
+    font-size: 20px;
+    color: cadetblue;
+
+}
+#ocultar{
+    display: none;
+}
+#mostar, #ocultar{
+    cursor: pointer;
+}
+
+/* estilos errores */
+.error {
+    color: rgb(255, 0, 0);
+    
+    text-align: right;
+}
