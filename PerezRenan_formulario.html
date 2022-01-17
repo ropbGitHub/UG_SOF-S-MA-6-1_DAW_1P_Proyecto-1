@@ -75,34 +75,65 @@
       <div class="container mt-5">
         <h2>Creación de Cuenta</h2>
 
+        <!-- Priemr Nombre -->
         <form class="row g-3">
           <div class="col-md-6">
-            <label class="form-label" for="firstname">Primer Nombre:</label>
-            <input class="form-control" type="text" required />
+            <label class="form-label" for="firstName">Primer Nombre:</label>
+            <input class="form-control" type="text" id="firstName" required />
           </div>
+
+          <!-- Apellidos -->
           <div class="col-md-6">
-            <label class="form-label" for="lastname">Apellidos:</label>
-            <input class="form-control" type="text" required />
+            <label class="form-label" for="lastName">Apellidos:</label>
+            <input class="form-control" type="text" id="lastName" required />
           </div>
+
+          <!-- E-mail -->
           <div class="col-md-8">
             <label class="form-label" for="emailInfo">E-mail</label>
-            <input class="form-control" type="email" placeholder="ejemplo@coreo.com" required />
+            <input
+              class="form-control"
+              type="email"
+              id="emailInfo"
+              placeholder="algo@algo.com"
+              required
+            />
           </div>
+
+          <!-- Telefono -->
           <div class="col-md-4">
             <label class="form-label" for="phoneNumber">Número de Teléfono:</label>
-            <input class="form-control" type="text" placeholder="+593 XXX XXX XXXX" />
+            <input
+              class="form-control"
+              type="text"
+              id="phoneNumber"
+              placeholder="+593 XXX XXX XXXX"
+            />
           </div>
-          <label class="form-label">Contraseña: </label>
-          <input type="password" /> <br /><br />
+
+          <!-- Contraseña 1 -->
+          <div class="col-md-6">
+            <label class="form-label" for="inputPassword2">Contraseña:</label>
+            <input
+              class="for-control"
+              type="password"
+              id="inputPassword2"
+              placeholder="********"
+              required
+            />
+          </div>
+
+          <!-- Año Nacimiento -->
           <div class="col-md-6">
             <label class="form-label" for="">Año de nacimiento:</label>
           </div>
+
           <label class="form-label">Eres mayor de edad: </label>
-          <input type="checkbox" /> <br /><br />
+          <input type="checkbox" />
           <label class="form-label">Te interesa recivir promociones: </label>
-          <input type="radio" /> <br /><br />
+          <input type="radio" />
           <label class="form-label">Foto de perfil</label>
-          <input type="file" /> <br /><br />
+          <input type="file" />
 
           <div class="col-md-12">
             <button type="submit" class="btn btn-primary">Registrarse</button>
@@ -116,6 +147,25 @@
           </form>
         </div>
       </div>
+
+      <!--  -->
+      <div class="container mt-5">
+        <form class="row g-3" action="/">
+          <h1>Registrarion</h1>
+
+          <div class="input-control col-md-6">
+            <label for="username">Username</label>
+            <input id="username" name="Username" type="text" />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control col-md-6">
+            <label for="email">E-mail</label>
+            <input id="email" name="username" type="text" />
+          </div>
+        </form>
+      </div>
+      <!--  -->
     </main>
 
     <!-- footer -->
