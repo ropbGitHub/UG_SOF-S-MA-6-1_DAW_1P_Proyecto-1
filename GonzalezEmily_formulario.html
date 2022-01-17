@@ -14,6 +14,12 @@
     <!-- CSS Style-->
     <link rel="stylesheet" href="assets/css/style_master.css" />
     <link rel="stylesheet" href="assets/css/GonzalezEmilyS.css" />
+    <!-- Javascript -->
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/app_GonzalezEmily.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- ICONO MENU -->
+    <script src="https://kit.fontawesome.com/7f7aa7ef65.js" crossorigin="anonymous"></script>
     <!-- browser tab icon-->
     <link rel="icon" href="assets/images/logo.png" />
     <!-- font external reference-->
@@ -64,177 +70,224 @@
       <!-- main-->
       <main>
         <div class="contenedor">
-          <!--COMIENZA el formulario-->
-
-          <section class="formularioE2GM">
-            <h2 id="ti">Formulario para la reserva</h2>
-            <div class="formsEGM">
-              <div id="formsEGM1">
-                <form class="InfoP">
-                  <fieldset>
-                    <legend>Información Personal</legend>
-                    <label class="label" for="dni">Cedula </label><br />
-                    <input type="text" id="dni" tabindex="1" placeholder="0000000000" />
-                    <br />
-                    <label class="label" for="lastname">Apellidos </label><br />
-                    <input
-                      type="text"
-                      id="lastname"
-                      tabindex="2"
-                      placeholder="Escriba sus apellidos"
-                    /><br />
-                    <label class="label" for="name">Nombre </label><br />
-                    <input type="text" id="name" tabindex="3" placeholder="Escriba su nombre" />
-                    <br />
-                    <label class="label" for="email">Correo Electronico </label><br />
-                    <input
-                      type="email"
-                      id="email"
-                      tabindex="4"
-                      placeholder="xxxxxx@example.com"
-                    /><br />
-                    <label class="label" for="numCel">Celular </label><br />
-                    <input type="text" id="numCel" tabindex="5" placeholder="0000000000" />
-                  </fieldset>
-                  <fieldset>
-                    <legend>Pago</legend>
-                    <label class="label" id="1L">Seleccione el metodo a pagar</label>
-                    <br />
-                    <label for="pago1"
-                      ><input type="radio" id="pago1" tabindex="19" name="t" />VISA
-                    </label>
-                    <label for="pago2"
-                      ><input type="RADIO" id="pago2" tabindex="20" name="t" />MARTERCAR
-                    </label>
-                    <label for="pago3"
-                      ><input type="RADIO" id="pago3" tabindex="21" name="t" />PAYPAL
-                    </label>
-
-                    <br />
-                    <label class="label">Seleccione la manera de pago</label>
-                    <br />
-                    <label for="SV1"
-                      ><input type="radio" id="SV1" tabindex="22" name="p" />Debito</label
-                    >
-                    <label for="SV2"
-                      ><input type="radio" id="SV2" tabindex="23" name="p" />Credito</label
-                    >
-                    <br />
-
-                    <label class="label" for="tarjeta">Ingrese el número de tarjeta</label><br />
-                    <input
-                      type="text"
-                      id="tarjeta"
-                      tabindex="24"
-                      placeholder="0000-0000-0000-0000"
-                    />
-                    <br />
-                    <label class="label" for="lastname">Número de atrás: </label><br />
-
-                    <input type="text" id="nt" tabindex="25" placeholder="0000" /><br />
-                    <label class="label" for="lastname">Fecha de expiracion: </label> <br />
-                    <input type="text" class="fe" tabindex="26" />
-                    <label class="label">-</label>
-                    <input type="text" class="fe" tabindex="27" />
-                    <br />
-                  </fieldset>
-                  <button class="btReset" type="reset">BORRAR</button>
-                </form>
-              </div>
-              <div id="formsEGM2">
-                <form>
-                  <fieldset>
-                    <legend>Información acerca de la reservación</legend>
-                    <label class="label">Seleccione un salón</label>
-                    <br />
-                    <label for="Salon1"
-                      ><input type="radio" id="Salon1" tabindex="6" name="Salon" />Salon Victoria
-                    </label>
-                    <label for="Salon2"
-                      ><input type="radio" id="Salon2" tabindex="7" name="Salon" />Salon Vista </label
-                    ><br />
-                    <label for="Salon3"
-                      ><input type="radio" id="Salon3" tabindex="8" name="Salon" />Salon Picaddily
-                    </label>
-                    <label for="Salon4"
-                      ><input type="radio" id="Salon4" tabindex="9" name="Salon" />Salon Bristol
-                    </label>
-                    <br />
-                    <label class="label" for="fecha">Seleccione la fecha del evento</label> <br />
-                    <input type="date" id="fecha" name="fecha" tabindex="10" />
-
-                    <br />
-                    <label class="label" for="cantp">Cantidad de personas: </label><br />
-                    <input type="number" id="cantp" tabindex="11" placeholder="1" /><br />
-                    <label id="descripcion"
-                      >La cantidad máxima de personas dependera del salón escogido</label
-                    >
-                    <br />
-                    <label class="label">Seleccione los servicios para el evento: </label> <br />
-                    <label for="Decoracion"
-                      ><input
-                        type="checkbox"
-                        id="Decoracion"
-                        tabindex="12"
-                        name="Decoracion"
-                      />Decoracion
-                    </label>
-                    <label for="Buffet"
-                      ><input
-                        type="checkbox"
-                        id="Buffet"
-                        tabindex="13"
-                        name="Buffet"
-                      />Buffet </label
-                    ><br />
-                    <label for="iluminacion"
-                      ><input
-                        type="checkbox"
-                        id="iluminacion"
-                        tabindex="14"
-                        name="iluminación"
-                      />iluminación</label
-                    >
-                    <label for="Audio"
-                      ><input type="checkbox" tabindex="15" id="Audio" name="Audio y video" />Audio
-                      y video
-                    </label>
-
-                    <br />
-                    <label class="label">¿Ingreso de niños?</label> <br />
-                    <label for="radio1"
-                      ><input type="radio" id="radio1" tabindex="16" name="SN" />Si
-                    </label>
-                    <label for="radio2"
-                      ><input type="radio" id="radio2" tabindex="17" name="SN" />No
-                    </label>
-
-                    <br />
-                    <label class="label"
-                      >Añada sugerencias o detalles acerca de la reservación</label
-                    >
-                    <br />
-                    <textarea
-                      name="sugerencia"
-                      rows="3"
-                      id="s"
-                      cols="30"
-                      tabindex="18"
-                      placeholder="Escriba algo"
-                    ></textarea>
-                  </fieldset>
-                  <button class="btReset" type="reset">BORRAR</button>
-                </form>
-              </div>
+            <h2>FORMULARIO</h2>
+            <div class="progres_bar">
+                <div class="pasos">
+                    <p>Datos</p>
+                    <div class="numPB">
+                        <span>1</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="pasos">
+                    <p>Nac</p>
+                    <div class="numPB">
+                        <span>2</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="pasos">
+                    <p>Cont</p>
+                    <div class="numPB">
+                        <span>3</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="pasos">
+                    <p>Fin</p>
+                    <div class="numPB">
+                        <span>4</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
             </div>
-            <div class="btnEnviar">
-              <form action="GonzalezEmily_Error.html">
-                <button id="btnEnviar" type="submit">ENVIAR RESERVA</button>
-              </form>
+
+            <div class="Princi_form_e2gm">
+                <!--FORMULARIO 1-->
+    
+             <form action="#">
+                <!--PAG 1-->
+                <div class="paginaF movForm">
+                    <div class="titulo">Informacin principal</div>
+                    <div class="datos">
+                        <label for="name">Nombres <b class="error" id="name-error"></b></label>
+                        <input type="text" id="name" placeholder="name">
+                    </div>
+                    <div class="datos">
+                        <label for="last_name">Apellidos <b class="error" id="lastname-error"></b></label>
+                        <input type="text" id="last_name" placeholder="last_name">
+                    </div>
+                    
+                    <div class="datos">
+                        <label for="idn">Ruc o Pasaporte <b class="error" id="ruc-error"></b></label>
+                        <input type="text" id="idn" name="idn" placeholder="idn">
+                    </div>
+    
+                    <div class="datos sigPag">
+                        <button id="btn_sig_e2gm">Siguiente</button>
+                    </div>
+    
+                </div>
+    
+                <!--PAG 2-->
+                <div class="paginaF">
+                    <div class="titulo">Informacin Adicional</div>
+                    <div class="datos">
+                        <label for="fec_nacimiento">Fecha Nacimiento  <b class="error" id="fn-error"></b> </label>
+                        <input type="date" id="fec_nacimiento" max="2003-12-31" >
+                    </div>
+                    <div class="datos">
+                        <label for="sexo">Sexo  <b class="error" id="sex-error"></b></label>
+                        <select id="sexo">
+                            <option value="-1"  disabled selected>Escoge una opcion</option>
+                            <option value="0">Femenino</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">otro</option>
+                        </select>
+                    </div>
+    
+                    <div class="datos btn">
+                        <button id="btn_atras_e2gm1" class="atr-pag1 volver">Atras</button>
+                        <button id="btn_sig_e2gm1" class="sig-pag3 adelante">Siguiente</button>
+                    </div>
+    
+                </div>
+    
+                <!--PAG 3-->
+                <div class="paginaF">
+                    <div class="titulo">Informacin Contacto</div>
+                    <div class="datos">
+                        <label for="email">Correo Electronico   <b class="error" id="email-error"></b> </label>
+                        <input type="text" id="email" placeholder="email">
+                    </div>
+                    <div class="datos">
+                        <label for="phone">Numero telefonico  <b class="error" id="phone-error"></b></label>
+                        <input type="text" id="phone" placeholder="phone">
+    
+                    </div>
+    
+                    <div class="datos btn">
+                        <button id="btn_atras_e2gm2" class="atr-pag2 volver">Atras</button>
+                        <button id="btn_sig_e2gm2" class="sig-pag4 adelante">Siguiente</button>
+                    </div>
+    
+                </div>
+    
+                <!--PAG 4-->
+                <div class="paginaF">
+                    <fieldset>
+                        <legend>Información acerca de la reservación</legend>
+                        <label class="label">Seleccione un salón</label>
+                        <br />
+                        <label for="Salon1"
+                          ><input type="radio" id="Salon1" tabindex="6" name="Salon" />Salon Victoria
+                        </label>
+                        <label for="Salon2"
+                          ><input type="radio" id="Salon2" tabindex="7" name="Salon" />Salon Vista </label
+                        ><br />
+                        <label for="Salon3"
+                          ><input type="radio" id="Salon3" tabindex="8" name="Salon" />Salon Picaddily
+                        </label>
+                        <label for="Salon4"
+                          ><input type="radio" id="Salon4" tabindex="9" name="Salon" />Salon Bristol
+                        </label>
+                        <br />
+                        <label class="label" for="fecha">Seleccione la fecha del evento</label> <br />
+                        <input type="date" id="fecha" name="fecha" tabindex="10" />
+    
+                        <br />
+                        <label class="label" for="cantp">Cantidad de personas: </label><br />
+                        <input type="number" id="cantp" tabindex="11" placeholder="1" /><br />
+                        <label id="descripcion"
+                          >La cantidad máxima de personas dependera del salón escogido</label
+                        >
+                        <br />
+                        <label class="label">Seleccione los servicios para el evento: </label> <br />
+                        <label for="Decoracion"
+                          ><input
+                            type="checkbox"
+                            id="Decoracion"
+                            tabindex="12"
+                            name="Decoracion"
+                          />Decoracion
+                        </label>
+                        <label for="Buffet"
+                          ><input
+                            type="checkbox"
+                            id="Buffet"
+                            tabindex="13"
+                            name="Buffet"
+                          />Buffet </label
+                        ><br />
+                        <label for="iluminacion"
+                          ><input
+                            type="checkbox"
+                            id="iluminacion"
+                            tabindex="14"
+                            name="iluminación"
+                          />iluminación</label
+                        >
+                        <label for="Audio"
+                          ><input type="checkbox" tabindex="15" id="Audio" name="Audio y video" />Audio
+                          y video
+                        </label>
+    
+                        <br />
+                        <label class="label">¿Ingreso de niños?</label> <br />
+                        <label for="radio1"
+                          ><input type="radio" id="radio1" tabindex="16" name="SN" />Si
+                        </label>
+                        <label for="radio2"
+                          ><input type="radio" id="radio2" tabindex="17" name="SN" />No
+                        </label>
+    
+                        <br />
+                        <label class="label"
+                          >Añada sugerencias o detalles acerca de la reservación</label
+                        >
+                        <br />
+                        <textarea
+                          name="sugerencia"
+                          rows="3"
+                          id="s"
+                          cols="30"
+                          tabindex="18"
+                          placeholder="Escriba algo"
+                        ></textarea>
+                      </fieldset>
+    
+                    <div class="datos btn">
+                        <button id="btn_atras_e2gmF" class="atr-pag3 volver">Atras</button>
+                        <button id="btn_final_e2gm3" class="btnfin">Finalizar</button>
+                    </div>
+    
+                </div>
+             </form>
             </div>
-          </section>
-        </div>
-      </main>
+        </div>  
+
+        <script>
+            function mostrarpassword(){
+                var x = document.getElementById("password");
+                var y = document.getElementById("ocultar");
+                var z = document.getElementById("mostrar");
+
+                if (x.type=='password'){
+                    x.type="text";
+                    y.style.display="block";
+                    z.style.display="none";
+                }else{
+                    x.type="password";
+                    y.style.display="none";
+                    z.style.display="block";
+                }
+
+            }
+        </script>
+        <script src="formularionuevo.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    </main>
     </div>
 
     <!-- footer -->
