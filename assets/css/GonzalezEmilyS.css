@@ -1,4 +1,11 @@
 /*!-----------------------Emily--------------------------!*/
+*{
+  margin: 0%;
+  padding: 0;
+  outline: none;
+  font-family: sans-serif;
+
+}
 header,
 section,
 footer,
@@ -206,6 +213,7 @@ tbody tr:nth-child(even) {
 /*!----------FORMULRIO-----!*/
 
 
+
 #EGMBoton{
   background: linear-gradient(to bottom, rgba(255, 223, 117, 0.39), rgba(240, 121, 52, 0.411)), url(../images/fondo.png);
   margin: 2%;
@@ -237,24 +245,36 @@ tbody tr:nth-child(even) {
     color: rgb(0, 0, 0);
   }
 
-  *{
-    margin: 0%;
-    padding: 0;
-    outline: none;
-    font-family: sans-serif;
+ 
 
+
+  .contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(images/Salon-Picaddilly-Empresarial-4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+.divi{
+    background: #fff;
+    width: 30%;
+    border-radius: 7px;
+    text-align: center;
+    padding: 30px 35px 0 35px;
+}
 
-
-
-.contenedor h2{
+.divi h2{
     font-size: 20px;
     font-weight: 600;
     margin: 0 0 30px 0;
 }
 
-.contenedor .Princi_form_e2gm{
+.divi .Princi_form_e2gm{
+
     width: 100%;
     overflow: hidden;
 
@@ -283,6 +303,26 @@ tbody tr:nth-child(even) {
     position: relative;
 }
 
+#checkbox{
+
+  width: 95%;
+  align-items: center;
+  display: flex;
+  position: relative;
+
+}
+#checkbox input{
+
+
+  top: -30px;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: italic;
+  margin: 5px;
+  text-align: left;
+  width: 100%;
+
+}
 .Princi_form_e2gm form .paginaF .datos label{
     position: absolute;
     top: -30px;
@@ -303,6 +343,8 @@ tbody tr:nth-child(even) {
     font-size: 16px;
     padding-left: 15px;
 }
+
+
 
 .Princi_form_e2gm form .paginaF .datos select{
 
@@ -349,11 +391,11 @@ form .paginaF .btn button.adelante{
 
 /*comienza los*/
 
-.contenedor .progres_bar{
+.divi .progres_bar{
     display: flex;
     margin: 40px 0;
 }
-.contenedor .progres_bar .pasos{
+.divi .progres_bar .pasos{
     text-align: center;
     width: 100%;
     position: relative;
@@ -409,6 +451,9 @@ form .paginaF .btn button.adelante{
     display: block;
     color: rgb(255, 255, 255);
 }
+
+
+
 .progres_bar .pasos .numPB:before,
 .progres_bar .pasos .numPB:after{
     position: absolute;

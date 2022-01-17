@@ -71,6 +71,7 @@
       <!-- main-->
       <main>
         <div class="contenedor">
+           <div class="divi">
             <h2>FORMULARIO</h2>
             <div class="progres_bar">
                 <div class="pasos">
@@ -176,86 +177,65 @@
     
                 <!--PAG 4-->
                 <div class="paginaF">
-                    <fieldset>
-                        <legend>Información acerca de la reservación</legend>
-                        <label class="label">Seleccione un salón</label>
-                        <br />
-                        <label for="Salon1"
-                          ><input type="radio" id="Salon1" tabindex="6" name="Salon" />Salon Victoria
-                        </label>
-                        <label for="Salon2"
-                          ><input type="radio" id="Salon2" tabindex="7" name="Salon" />Salon Vista </label
-                        ><br />
-                        <label for="Salon3"
-                          ><input type="radio" id="Salon3" tabindex="8" name="Salon" />Salon Picaddily
-                        </label>
-                        <label for="Salon4"
-                          ><input type="radio" id="Salon4" tabindex="9" name="Salon" />Salon Bristol
-                        </label>
-                        <br />
-                        <label class="label" for="fecha">Seleccione la fecha del evento</label> <br />
-                        <input type="date" id="fecha" name="fecha" tabindex="10" />
-    
-                        <br />
-                        <label class="label" for="cantp">Cantidad de personas: </label><br />
-                        <input type="number" id="cantp" tabindex="11" placeholder="1" /><br />
-                        <label id="descripcion"
-                          >La cantidad máxima de personas dependera del salón escogido</label
-                        >
-                        <br />
-                        <label class="label">Seleccione los servicios para el evento: </label> <br />
-                        <label for="Decoracion"
-                          ><input
-                            type="checkbox"
-                            id="Decoracion"
-                            tabindex="12"
-                            name="Decoracion"
-                          />Decoracion
-                        </label>
-                        <label for="Buffet"
-                          ><input
-                            type="checkbox"
-                            id="Buffet"
-                            tabindex="13"
-                            name="Buffet"
-                          />Buffet </label
-                        ><br />
-                        <label for="iluminacion"
-                          ><input
-                            type="checkbox"
-                            id="iluminacion"
-                            tabindex="14"
-                            name="iluminación"
-                          />iluminación</label
-                        >
-                        <label for="Audio"
-                          ><input type="checkbox" tabindex="15" id="Audio" name="Audio y video" />Audio
-                          y video
-                        </label>
-    
-                        <br />
-                        <label class="label">¿Ingreso de niños?</label> <br />
-                        <label for="radio1"
-                          ><input type="radio" id="radio1" tabindex="16" name="SN" />Si
-                        </label>
-                        <label for="radio2"
-                          ><input type="radio" id="radio2" tabindex="17" name="SN" />No
-                        </label>
-    
-                        <br />
+                  <div class="titulo">Información acerca de la reservación</div>
+                      <div class="datos"> 
+                        <label for="salon">Seleccione un salón  <b class="error" id="salon-error"></b></label>
+                        <select id="salon">
+                            <option value="-1"  disabled selected>Escoge una opcion</option>
+                            <option value="0">Salon Victoria</option>
+                            <option value="1">Salon Piccaddily</option>
+                            <option value="2">Salon bristol</option>
+                            <option value="2">Salon Vista</option>
+
+                        </select>
+                      
+                      </div>
+                      <div class="datos">
+                        <label for="eventoF">Fecha del Evento  <b class="error" id="eventoF-error"></b> </label>
+                        <input type="date" id="eventoF" />
+                      </div>
+                      <div class="datos"> 
+                        <label class="label" for="cantp">Cantidad de personas: </label>
+                        <input type="number" id="cantp" placeholder="1"  min="0"/>
+                        <div class="label" id="descripcion" style="font-size: 8px;">La cantidad máxima de personas dependera del salón escogido </div>
+                      </div>
+
+                      <div class="datos" id="checkbox"> 
+                        <label class="label">Seleccione los servicios para el evento: </label>
+                        
+                        <input type="checkbox" class="checkbox"  name="Decoracion">Decoracion  
+                        <input type="checkbox" class="checkbox"  name="Buffet">Buffet 
+                        <input type="checkbox" class="checkbox"  name="Iluminación">Iluminación
+                        <input type="checkbox" class="checkbox"  name="AudioVi">Audio y video
+                     
+                      </div>
+
+
+                      <div class="datos">
+                        <label class="label">¿Ingreso de niños? <b class="error" id="ninos-error"></b></label> 
+                       <select id="ninos">
+                            <option value="-1"  disabled selected>Escoge una opcion</option>
+                            <option value="0">Si</option>
+                            <option value="1">No</option>
+                           
+
+                        </select>
+                        </div>
+                        <div class="datos">
+                        
                         <label class="label"
                           >Añada sugerencias o detalles acerca de la reservación</label
                         >
-                        <br />
+                        
                         <textarea
                           name="sugerencia"
                           rows="3"
                           id="s"
                           cols="30"
-                          tabindex="18"
                           placeholder="Escriba algo"
                         ></textarea>
-                      </fieldset>
+                      </div>
+                      
     
                     <div class="datos btn">
                         <button id="btn_atras_e2gmF" class="atr-pag3 volver">Atras</button>
@@ -265,6 +245,8 @@
                 </div>
              </form>
             </div>
+
+           </div>
         </div>  
 
         <script>

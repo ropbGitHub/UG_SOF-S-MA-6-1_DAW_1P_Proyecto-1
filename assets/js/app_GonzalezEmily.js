@@ -258,84 +258,62 @@ btn_sig2.addEventListener('click', function(e){
 
     e.preventDefault();
 
-    c++;
-    console.log(c);
+    var fec_ev = document.querySelector('input[id="eventoF"]').value;
+    var salon = document.getElementById("salon").value;
+    var nin = document.getElementById("ninos").value;
 
-    var user = document.getElementById("user").value;
-    var password = document.getElementById("password").value;
+    if ( salon==-1 && fec_ev=="" && nin==-1){
+        document.getElementById("eventoF-error").innerHTML = "* Seleccione una fecha."
+        document.getElementById("eventoF").style.borderColor="#DA2A33"
+        document.getElementById("salon-error").innerHTML = "* Seleccione una opción."
+        document.getElementById("salon").style.borderColor="#DA2A33"
+        document.getElementById("ninos-error").innerHTML = "* Seleccione una opción."
+        document.getElementById("ninos").style.borderColor="#DA2A33"
+    
+        }else if ( salon==-1 || fec_ev=="" || nin==-1 ){
+    
+        if ( salon==-1 ){
+        document.getElementById("salon-error").innerHTML = "* Seleccione una opción."
+        document.getElementById("salon").style.borderColor="#DA2A33"      
+        }else {
+        document.getElementById("salon-error").innerHTML = ""
+        document.getElementById("salon").style.borderColor="lightgrey"      
+        }
+    
+        if ( fec_ev=="" ){
+        document.getElementById("eventoF-error").innerHTML = "* Seleccione una fecha."
+        document.getElementById("eventoF").style.borderColor="#DA2A33"      
+        }else {
+        document.getElementById("eventoF-error").innerHTML = ""
+        document.getElementById("eventoF").style.borderColor="lightgrey"      
+        }
+        if ( nin==-1 ){
+            document.getElementById("ninos-error").innerHTML = "* Seleccione una opción."
+            document.getElementById("ninos").style.borderColor="#DA2A33"      
+            }else {
+            document.getElementById("ninos-error").innerHTML = ""
+            document.getElementById("ninos").style.borderColor="lightgrey"      
+            }
+    
+        } else {
+            document.getElementById("salon-error").innerHTML = ""
+        document.getElementById("salon").style.borderColor="lightgrey"
+        document.getElementById("eventoF-error").innerHTML = ""
+        document.getElementById("eventoF").style.borderColor="lightgrey"
+        document.getElementById("ninos-error").innerHTML = ""
+        document.getElementById("ninos").style.borderColor="lightgrey"
+    
+        
+        num[cont - 1].classList.add("active");
+        progressText[cont - 1].classList.add("active");
+        progressCheck[cont - 1].classList.add("active");
+        cont += 1;
+          
+         alert("Se enviara un confirmacion a su correo electronico con los datos para la trasferencia (50%) antes de los 15 dias desde el mensaje");
+        limpiar();
+        }
 
-    if ( user=="" && password=="" ){
-
-    document.getElementById("user-error").innerHTML = "* Este campo no puede quedar vacío."
-    document.getElementById("user").style.borderColor="#DA2A33"
-    document.getElementById("pass-error").innerHTML = "* Este campo no puede quedar vacío."
-    document.getElementById("password").style.borderColor="#DA2A33"  
-
-    }else if ( user=="" || password=="" || 
-    user.length<2 || password.length<5 || 
-    !verificarUsuario(user) || !verificarContra(password) 
-    ){
-
-    if ( user=="" ){
-    document.getElementById("user-error").innerHTML = "* Este campo no puede quedar vacío."
-    document.getElementById("user").style.borderColor="#DA2A33"      
-    }else if ( user.length<2 && !verificarUsuario(user) ){
-    document.getElementById("pass-error").innerHTML = "* Solo mayúsculas, minúsculas y letras."
-    document.getElementById("password").style.borderColor="#DA2A33"      
-    }else if ( user.length<2 ){
-    document.getElementById("user-error").innerHTML = "* Debe tener 3 o más caractéres."
-    document.getElementById("user").style.borderColor="#DA2A33"      
-    }else if ( !verificarUsuario(user) ){
-    document.getElementById("user-error").innerHTML = "* Ingreso de datos inválidos."
-    document.getElementById("user").style.borderColor="#DA2A33"      
-    }else {
-    document.getElementById("user-error").innerHTML = ""
-    document.getElementById("user").style.borderColor="lightgrey"      
-    }
-
-    if ( password=="" ){
-    document.getElementById("pass-error").innerHTML = "* Este campo no puede quedar vacío."
-    document.getElementById("password").style.borderColor="#DA2A33"      
-    }else if ( password.length<5 && !verificarContra(password) ){
-    document.getElementById("pass-error").innerHTML = "* Mínimo una MAY, MIN y NUM."
-    document.getElementById("password").style.borderColor="#DA2A33"      
-    }else if ( password.length<5 ){
-    document.getElementById("pass-error").innerHTML = "* Debe tener 6 a más caractéres."
-    document.getElementById("password").style.borderColor="#DA2A33"      
-    }else if ( !verificarContra(password) ){
-    document.getElementById("pass-error").innerHTML = "* Ingreso de caractéres inválidos."
-    document.getElementById("password").style.borderColor="#DA2A33"      
-    }else {
-    document.getElementById("pass-error").innerHTML = ""
-    document.getElementById("password").style.borderColor="lightgrey"      
-    }
-
-    } else {
-
-    document.getElementById("user-error").innerHTML = ""
-    document.getElementById("user").style.borderColor="lightgrey"
-    document.getElementById("pass-error").innerHTML = ""
-    document.getElementById("password").style.borderColor="lightgrey"
-
-    num[cont - 1].classList.add("active");
-    progressText[cont - 1].classList.add("active");
-    progressCheck[cont - 1].classList.add("active");
-    cont += 1;
-
-    alert("Se enviara un confirmacion a su correo")
-
-    }
-
-    function verificarUsuario($n){
-    var ExpRegular_Correo = /^[a-zA-Z][a-zA-Z0-9_]{3,9}$/;
-    return ExpRegular_Correo.test($n);
-    }
-
-    function verificarContra($m){
-    var ExpRegular_Num = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,16}$/; /* al menos un dígito, al menos una minúscula y al menos una mayúscula. */
-    return ExpRegular_Num.test($m);
-    }
-
+       
     function limpiar(){
     document.getElementById("name").value = "";
     document.getElementById("last_name").value = "";
@@ -344,43 +322,44 @@ btn_sig2.addEventListener('click', function(e){
     document.getElementById("sexo").value = -1;
     document.getElementById("email").value = "";
     document.getElementById("phone").value = "";
-    document.getElementById("user").value = "";
-    document.getElementById("password").value = "";
+
     }
 
     });
 
-
+    
     btn_atras.addEventListener("click", function(e){
 
-    e.preventDefault();
+        e.preventDefault();
+    
+        formEG.style.marginLeft = "0%";
+        num[cont - 2].classList.remove("active");
+        progressText[cont - 2].classList.remove("active");
+        progressCheck[cont - 2].classList.remove("active");
+        cont -= 1;
+        });
+    
+        btn_atras2.addEventListener("click", function(e){
+    
+        e.preventDefault();
+    
+        formEG.style.marginLeft = "-25%";
+        num[cont - 2].classList.remove("active");
+        progressText[cont - 2].classList.remove("active");
+        progressCheck[cont - 2].classList.remove("active");
+        cont -= 1;
+        });
+    
+        btn_atras3.addEventListener("click", function(e){
+    
+        e.preventDefault();
+    
+        formEG.style.marginLeft = "-50%";
+        num[cont - 2].classList.remove("active");
+        progressText[cont - 2].classList.remove("active");
+        progressCheck[cont - 2].classList.remove("active");
+        cont -= 1;
+        });
 
-    formEG.style.marginLeft = "0%";
-    num[cont - 2].classList.remove("active");
-    progressText[cont - 2].classList.remove("active");
-    progressCheck[cont - 2].classList.remove("active");
-    cont -= 1;
-    });
-
-    btn_atras2.addEventListener("click", function(e){
-
-    e.preventDefault();
-
-    formEG.style.marginLeft = "-25%";
-    num[cont - 2].classList.remove("active");
-    progressText[cont - 2].classList.remove("active");
-    progressCheck[cont - 2].classList.remove("active");
-    cont -= 1;
-    });
-
-    btn_atras3.addEventListener("click", function(e){
-
-    e.preventDefault();
-
-    formEG.style.marginLeft = "-50%";
-    num[cont - 2].classList.remove("active");
-    progressText[cont - 2].classList.remove("active");
-    progressCheck[cont - 2].classList.remove("active");
-    cont -= 1;
-    });
+   
 
